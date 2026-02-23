@@ -1,0 +1,3 @@
+/* print */
+body { background: #fff; color: #000; }
+#header .h_contact, .navToggle, .bx-controls, .radius_btn { display: none !important; }

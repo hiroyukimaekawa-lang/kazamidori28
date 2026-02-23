@@ -1,0 +1,14 @@
+/* CSS Document */
+/* import */
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond);
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+@import "layout.css";
+@import "fullscreen.overlay.effects.css";
+@import "jquery.bxslider.css";
+@import "tablet.css";
+@import "sp.css";

@@ -1,0 +1,108 @@
+@media screen and (max-width: 1040px) {
+  header .navToggle {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 51px;
+    height: 51px;
+    padding: 15px 12px;
+    cursor: pointer;
+    z-index: 9999;
+  }
+  header .navToggle div {
+    position: relative;
+    z-index: 9999;
+  }
+  header .navToggle span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #8c8c8c;
+    left: 0;
+    transition: .35s ease-in-out;
+    border-radius: 5px;
+  }
+  header .navToggle span:nth-child(1) { top: 0; }
+  header .navToggle span:nth-child(2) { top: 9px; }
+  header .navToggle span:nth-child(3) { top: 18px; }
+  header.open .navToggle span:nth-child(1) {
+    top: 11px;
+    transform: rotate(315deg);
+  }
+  header.open .navToggle span:nth-child(2) {
+    width: 0;
+    left: 50%;
+  }
+  header.open .navToggle span:nth-child(3) {
+    top: 11px;
+    transform: rotate(-315deg);
+  }
+  header .overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 9000;
+  }
+  header .overlay nav.global-navigation {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 20px;
+  }
+  header .sp-nav nav.global-navigation > ul { display: block; }
+  header .sp-nav nav.global-navigation > ul > li > a,
+  header .sp-nav nav.global-navigation > ul > li > p {
+    display: inline-block;
+    padding: 14px 0;
+    color: #FFF !important;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+  }
+  header .sp-nav nav.global-navigation li {
+    overflow: hidden;
+    width: 100%;
+    border-bottom: 0 solid #fff;
+    font-family: 'Noto Sans Japanese', serif;
+    font-size: 19px;
+    letter-spacing: 0.1em;
+  }
+  header .sp-nav nav.global-navigation li:last-child { border-bottom: none; }
+  header .sp-nav nav.global-navigation li a {
+    display: block;
+    color: #fff;
+  }
+  header .overlay-scale {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+  }
+  header .overlay-scale.open {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    transition: transform 0.4s, opacity 0.4s;
+  }
+  .tel {
+    text-align: center;
+    margin: 20px auto 0;
+    font-family: 'Oswald', 'Yu Gothic', serif;
+    line-height: 28px;
+    margin-bottom: 10px;
+    font-size: 2em;
+  }
+  .tel span { font-size: 16px; }
+  #header .tel a {
+    display: block;
+    text-decoration: none;
+    color: #FFF;
+  }
+}

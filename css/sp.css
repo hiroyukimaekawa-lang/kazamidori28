@@ -1,0 +1,93 @@
+@media screen and (min-width: 769px) {
+  a[href^="tel:"] { pointer-events: none; }
+}
+
+/* SPレイアウト 768px */
+@media screen and (max-width: 768px) {
+  .tn { display: block; }
+  .sn { display: none; }
+  header { position: relative; }
+  .maintxt { padding-left: 20%; }
+  #slider li.main01,
+  #slider li.main02,
+  #slider li.main03 {
+    min-height: unset;
+    height: 60vh;
+  }
+  #wrap-content h3 { font-size: 1.1em; letter-spacing: 0.03em; }
+  #wrap-content h3 span { font-size: 0.6em; }
+  #wrap-content h4 { font-size: 1.2em; }
+  #wrap-content p { font-size: 0.85em; text-align: left; }
+  #greeting h3 {
+    background: url(https://www.kazamidori28.com/images/top/greeting_ico.png) no-repeat top center / 30%,
+      url(https://www.kazamidori28.com/images/top/greeting_line.png) no-repeat bottom center;
+    padding-top: 23%;
+  }
+  #shop h3 { padding-top: 3em; }
+  #news dl { display: block; }
+  #news dl dt {
+    width: 100%;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    line-height: 30px;
+  }
+  #news dl dd {
+    width: 100%;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    line-height: 50px;
+  }
+  .news { width: 100%; }
+  .blog { width: 100%; margin-top: 3em; }
+  #reservation {
+    padding-bottom: 48%;
+    background-position: center bottom;
+    background-size: 60%;
+  }
+  .reservation { padding-bottom: 0; }
+  #reservation h3 {
+    background: url(https://www.kazamidori28.com/images/top/reservation_h3.png) no-repeat top center / 30%,
+      url(https://www.kazamidori28.com/images/top/reservation_line.png) no-repeat bottom center;
+    padding-top: 23%;
+  }
+  #reservation .radius_btn { margin: 0 auto; }
+  #sub_visual { height: 250px; }
+  .subcontents { margin-top: 40px; padding-bottom: 40px; }
+  .subTtlA { font-size: 14px; }
+  .subTtlA span { font-size: 30px; }
+  .subTtlB { margin: 40px 0 20px; font-size: 24px; }
+  .subTtlB span { display: block; font-size: 14px; }
+  .Table01 th { display: block; padding: 8px; width: 100%; text-align: left; }
+  .Table01 td { display: block; padding: 16px 8px; width: 100%; }
+  .Table01 tr:last-of-type th { border-bottom: none; }
+  .Table01 tr:last-of-type td { border-bottom: dashed 1px #618801; }
+  .Table02 th, .Table02 td { padding: 8px; }
+  .sub_contact ul li { width: 90%; }
+  .sub_contact ul li.contact_mail { border-right: none; }
+  .sub_contact ul li.contact_mail .radius_btn { margin-top: 16px; }
+  .sub_contact ul li.contact_tel p:last-child { margin-top: 16px; line-height: 1.5; }
+  .sub_contact ul li.contact_tel { margin-top: 1em; }
+  .subBox02 li { width: 48%; margin-bottom: 16px; }
+  ul.subBox01 li:nth-of-type(1) { width: 100%; }
+  ul.subBox01 li:nth-of-type(2) { width: 100%; margin-top: 32px; }
+  .about02 ul:nth-of-type(2) { margin-top: 16px; }
+  .sub--menu ul.menuBox li { width: 100%; }
+  .course01 > ul:nth-of-type(1) > li { width: 100%; }
+  .course01 > ul:nth-of-type(1) > li:nth-of-type(2) { margin-top: 2em; }
+  .course01 .subBox02 { margin-top: 1em; }
+  .course02 > ul > li { width: 100%; }
+  .sub--list dl dt { width: 100%; }
+  .sub--list dl dd { width: 100%; }
+  .page_nav { margin-top: 40px; }
+  .sub--sitemap ul li { width: 90%; max-width: 400px; margin-bottom: 16px; }
+  .sub--sitemap ul li:not(:nth-of-type(3n)) { margin-right: 0; }
+  .contactBox01 p { padding: 20px; }
+  .contTable th { padding: 16px; }
+  .sub--contact .btn_area { margin-top: 24px; }
+  .Table01.contTable02 tr.last th { border-bottom: none; }
+  .Table01.contTable02 tr.last td { border-bottom: dashed 1px #618801; }
+  .Table01.contTable02 td.line02 { border: none; }
+  ul.pagenation { margin-top: 40px; }
+}
