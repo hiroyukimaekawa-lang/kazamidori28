@@ -1,2096 +1,2125 @@
-@charset "UTF-8"; 
- 
-/* layout */ 
- 
- 
+@charset "UTF-8";
+
+/* layout */
+
+
 /*================================= 
 Initialization of style 
-===================================*/ 
- 
-body { 
- margin: 0; 
- padding: 0; 
- color: #383838; 
- font-family: 'Noto Sans Japanese', serif; 
- font-size: 16px; 
- line-height: 150%; 
- text-align: center; 
- width: 100%; 
- min-width: 1022px; 
- font-weight: 400; 
-} 
- 
-a { 
- transition: all .3s; 
-} 
- 
-a:link, 
-a:visited { 
- text-decoration: none; 
- color: #222; 
-} 
- 
-a:hover, 
-a:active { 
- /* text-decoration: underline; */ 
- color: #8c8c8c; 
- opacity: 0.7; 
-} 
- 
-div, 
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
-h6, 
-p, 
-dl, 
-dt, 
-dd, 
-ul, 
-ol, 
-li, 
-form { 
- margin: 0; 
- padding: 0; 
-} 
- 
-img, 
-a img { 
- border: none; 
- vertical-align: bottom; 
- max-width: 100%; 
-} 
- 
-a img:hover { 
- filter: alpha(opacity=75); 
- -moz-opacity: 0.75; 
- opacity: 0.75; 
-} 
- 
-.pn { 
- display: none; 
-} 
- 
- 
-/* blockgroup */ 
- 
-h1 { 
- font-size: 11px; 
- font-weight: normal; 
- text-align: center; 
- max-width: 1920px; 
- color: #7d7d7d; 
- padding-top: 1em; 
- margin: 0 auto; 
- vertical-align: middle; 
-} 
- 
- 
-/* List_group */ 
- 
-ul, 
-ol, 
-li { 
- list-style: none; 
-} 
- 
- 
-/* inline-style */ 
- 
-address { 
- font-style: normal; 
- font-size: 11px; 
-} 
- 
-address a, 
-address a:link, 
-address a:visited { 
- text-decoration: none; 
- color: #ffffff; 
-} 
- 
-address a:hover, 
-address a:active { 
- text-decoration: underline; 
- color: #FFF; 
-} 
- 
- 
-/* table */ 
- 
-table { 
- width: 100%; 
-} 
- 
-*, 
-*:before, 
-*:after { 
- -webkit-box-sizing: border-box; 
- -moz-box-sizing: border-box; 
- -o-box-sizing: border-box; 
- -ms-box-sizing: border-box; 
- box-sizing: border-box; 
-} 
- 
- 
+===================================*/
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--text-dark);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    width: 100%;
+    min-width: 1022px;
+    font-weight: 400;
+    background-color: var(--bg-white);
+}
+
+a {
+    transition: var(--transition-base);
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: var(--text-dark);
+}
+
+a:hover,
+a:active {
+    color: var(--primary-red);
+    opacity: 0.8;
+}
+
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+form {
+    margin: 0;
+    padding: 0;
+}
+
+img,
+a img {
+    border: none;
+    vertical-align: bottom;
+    max-width: 100%;
+}
+
+a img:hover {
+    filter: alpha(opacity=75);
+    -moz-opacity: 0.75;
+    opacity: 0.75;
+}
+
+.pn {
+    display: none;
+}
+
+
+/* blockgroup */
+
+h1 {
+    font-size: 11px;
+    font-weight: normal;
+    text-align: center;
+    max-width: 1920px;
+    color: var(--text-muted);
+    padding-top: 1em;
+    margin: 0 auto;
+    vertical-align: middle;
+}
+
+
+/* List_group */
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+
+/* inline-style */
+
+address {
+    font-style: normal;
+    font-size: 11px;
+}
+
+address a,
+address a:link,
+address a:visited {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+address a:hover,
+address a:active {
+    text-decoration: underline;
+    color: #FFF;
+}
+
+
+/* table */
+
+table {
+    width: 100%;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
 /*============================= 
 Layout-Base 
-===============================*/ 
- 
- 
+===============================*/
+
+
 /* header 
--------------------------*/ 
- 
-.clearfix:after { 
- display: block; 
- content: " "; 
- clear: both; 
-} 
- 
-header { 
- position: relative; 
- top: 0; 
- width: 100%; 
- padding: 0; 
- margin: 0 auto; 
-} 
- 
-#header { 
- width: 100%; 
- position: relative; 
- color: #272727; 
- margin: 0 auto; 
- padding: 0; 
-} 
- 
-#header a { 
- text-decoration: none; 
-} 
- 
-#header a:hover { 
- color: #9a9a9a; 
- transition: .4s; 
-} 
- 
-.header_inner { 
- width: 100%; 
- position: relative; 
- padding: 0 0 2em; 
- margin: 0 auto; 
- vertical-align: middle; 
-} 
- 
-.siteTitle { 
- max-height: 114px; 
- width: 20%; 
- text-align: left; 
- vertical-align: middle; 
-} 
- 
-.siteTitle a { 
- display: inline-block; 
- min-width: 200px; 
- max-width: 322px; 
- width: 100%; 
-} 
- 
-.siteTitle img { 
- width: 100%; 
- height: auto; 
-} 
- 
-.siteTitle span { 
- display: block; 
- font-size: 0.8em; 
-} 
- 
-.h_info { 
- margin-left: auto; 
- margin-right: 0; 
- padding: 0; 
- background: #fff; 
- vertical-align: bottom; 
-} 
- 
-.hd_inner_tel { 
- position: relative; 
- width: 61%; 
- display: inline-block; 
-} 
- 
-.h_tel a { 
- display: inline-block; 
- height: 45px; 
- line-height: 45px; 
- font-size: 30px; 
- font-weight: 100; 
- text-align: left; 
-} 
- 
-.h_tel { 
- font-size: 15px; 
- width: 52%; 
- /* padding-top: 0.2em; */ 
- text-align: left; 
- letter-spacing: 0.05em; 
- line-height: 1.5em; 
- min-width: 220px; 
- font-family: 'Abel'; 
-} 
- 
-#header .tel_txt { 
- font-family: 'Oswald'; 
- font-size: 1.6em; 
-} 
- 
-.h_tel .tel_link { 
- display: inline-block; 
- font-size: 22px; 
- text-align: left; 
- /* letter-spacing: 0.08em; */ 
- font-weight: 300; 
- letter-spacing: 0.1em; 
- font-family: 'Oswald'; 
-} 
- 
-.h_tel p { 
- font-size: 0.8em; 
- text-align: left; 
- font-weight: 100; 
- /* padding-left:2.7em; */ 
-} 
- 
-.h_tel p.bg_gr { 
- background: #618801; 
- color: #fff; 
- /* display:inline-block; */ 
- margin: 0 auto; 
- padding: 0; 
- text-align: center; 
-} 
- 
-.h_contact { 
- vertical-align: top; 
- width: 42%; 
- max-width: 211px; 
- height: 100%; 
- margin: 0; 
- position: relative; 
- display: inline-block; 
-} 
- 
-.h_contact a { 
- display: block; 
- letter-spacing: 0.1em; 
- text-decoration: none; 
- font-size: 0.9em; 
- color: #fff; 
- font-weight: 400; 
- line-height: 3em; 
- padding-top: 3em; 
- font-family: 'Abel', 'Noto Sans-Serif Japanese', sans-serif; 
- background: url(https://www.kazamidori28.com/images/common/h_mail.png) no-repeat 50% 30% #850303; 
- text-transform: uppercase; 
- opacity: 1; 
-} 
- 
-.tel_txt { 
- font-size: 1.3em; 
- display: inline-block; 
- text-align: left; 
-} 
- 
-.h_contact a:hover { 
- background-color: #e8e7e3; 
- transition: .4s; 
-} 
- 
- 
+-------------------------*/
+
+.clearfix:after {
+    display: block;
+    content: " ";
+    clear: both;
+}
+
+header {
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+}
+
+#header {
+    width: 100%;
+    position: relative;
+    color: #272727;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#header a {
+    text-decoration: none;
+}
+
+#header a:hover {
+    color: #9a9a9a;
+    transition: .4s;
+}
+
+.header_inner {
+    width: 100%;
+    position: relative;
+    padding: 0 0 2em;
+    margin: 0 auto;
+    vertical-align: middle;
+}
+
+.siteTitle {
+    max-height: 114px;
+    width: 20%;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.siteTitle a {
+    display: inline-block;
+    min-width: 200px;
+    max-width: 322px;
+    width: 100%;
+}
+
+.siteTitle img {
+    width: 100%;
+    height: auto;
+}
+
+.siteTitle span {
+    display: block;
+    font-size: 0.8em;
+}
+
+.h_info {
+    margin-left: auto;
+    margin-right: 0;
+    padding: 0;
+    background: var(--bg-white);
+    vertical-align: bottom;
+}
+
+.hd_inner_tel {
+    position: relative;
+    width: 61%;
+    display: inline-block;
+}
+
+.h_tel a {
+    display: inline-block;
+    height: 45px;
+    line-height: 45px;
+    font-size: 30px;
+    font-weight: 100;
+    text-align: left;
+}
+
+.h_tel {
+    font-size: 15px;
+    width: 52%;
+    /* padding-top: 0.2em; */
+    text-align: left;
+    letter-spacing: 0.05em;
+    line-height: 1.5em;
+    min-width: 220px;
+    font-family: 'Abel';
+}
+
+#header .tel_txt {
+    font-family: 'Oswald';
+    font-size: 1.6em;
+}
+
+.h_tel .tel_link {
+    display: inline-block;
+    font-size: 22px;
+    text-align: left;
+    /* letter-spacing: 0.08em; */
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    font-family: 'Oswald';
+}
+
+.h_tel p {
+    font-size: 0.8em;
+    text-align: left;
+    font-weight: 100;
+    /* padding-left:2.7em; */
+}
+
+.h_tel p.bg_gr {
+    background: var(--primary-green);
+    color: var(--text-white);
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+.h_contact {
+    vertical-align: top;
+    width: 42%;
+    max-width: 211px;
+    height: 100%;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+}
+
+.h_contact a {
+    display: block;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    font-size: 0.9em;
+    color: var(--text-white);
+    font-weight: 400;
+    line-height: 3em;
+    padding-top: 3em;
+    font-family: var(--font-sans);
+    background: url(https://www.kazamidori28.com/images/common/h_mail.png) no-repeat 50% 30% var(--primary-red);
+    text-transform: uppercase;
+    opacity: 1;
+    transition: var(--transition-base);
+}
+
+.h_contact a:hover {
+    background-color: var(--primary-red-hover);
+    opacity: 0.9;
+}
+
+
 /* global-navigation 
--------------------------*/ 
- 
-.pc-nav { 
- width: 100%; 
- background: #fff; 
-} 
- 
-.pc-nav ul { 
- padding: 2em 0; 
- max-width: 1080px; 
- margin: 0 auto; 
-} 
- 
-.pc-nav li { 
- line-height: 31px; 
- font-size: 14px; 
- position: relative; 
- vertical-align: top; 
- text-align: center; 
- position: relative; 
-} 
- 
-.pc-nav li a { 
- display: block; 
- text-decoration: none; 
- width: 100%; 
- font-weight: 500; 
- letter-spacing: 0.1em; 
- padding: 1em 0em 0em; 
- text-align: center; 
- border-bottom: 1px solid #fff; 
-} 
- 
-.pc-nav li a:link, 
-.pc-nav li a:visited { 
- color: #333333; 
-} 
- 
-.pc-nav li a:hover, 
-.pc-nav li a:active { 
- color: #0666e0; 
- text-decoration: none; 
-} 
- 
-.pc-nav li a::after { 
- content: ""; 
- display: inline-block; 
- position: absolute; 
- background: url(https://www.kazamidori28.com/images/common/nav_line.png) no-repeat 0 0 / cover; 
- width: 8px; 
- height: 13px; 
- right: -35%; 
- top: 50%; 
-} 
- 
-.pc-nav li:first-child a::after { 
- right: -85%; 
-} 
- 
-.pc-nav li:nth-child(4) a::after { 
- right: -30%; 
-} 
- 
-.pc-nav li:nth-child(5) a::after { 
- right: -30%; 
-} 
- 
-.pc-nav li:nth-child(6) a::after { 
- display: none; 
-} 
- 
-.pc-nav li.on a { 
- color: #618801; 
- border-bottom: 1px solid #618801; 
-} 
- 
-#header .pc-nav li a:hover { 
- color: #618801; 
- border-bottom: 1px solid #618801; 
-} 
- 
-.h_telbox { 
- width: 52%; 
- margin-right: 0; 
- margin-left: auto; 
- padding-top: 0.5em; 
- max-width: 450px; 
- /* min-width: 410px; */ 
- width: 410px; 
- /* float: right; */ 
-} 
- 
-.pc-nav li.pn { 
- display: none; 
-} 
- 
-.pc-nav ul.menu__second-level { 
- visibility: hidden; 
- opacity: 0; 
-} 
- 
-.pc-nav ul>li.menu__single { 
- position: relative; 
- background: none; 
-} 
- 
-.pc-nav li.menu__single ul.menu__second-level { 
- position: absolute; 
- width: 162%; 
- background: #00000080; 
- -webkit-transition: all .2s ease; 
- transition: all .2s ease; 
- z-index: 99999999; 
-} 
- 
-.pc-nav li.menu__single:hover ul.menu__second-level { 
- top: 61px; 
- visibility: visible; 
- opacity: 1; 
-} 
- 
-.pc-nav ul.menu__second-level li { 
- border-left: none!important; 
- color: #FFF; 
- width: 100%; 
- height: 50px; 
- line-height: 70px; 
- font-size: 0.9em; 
-} 
- 
-.pc-nav li.menu__single:hover ul.menu__second-level li a, 
-.pc-nav li.menu__single ul.menu__second-level li a { 
- background: none; 
- color: #FFF; 
- padding: 0px 0 0 16%; 
- text-align: left; 
- line-height: 50px; 
- background: url(https://www.kazamidori28.com/images/common/nav_bd.png) no-repeat bottom center; 
-} 
- 
-.pc-nav li.menu__single ul.menu__second-level li:last-child a { 
- background: none; 
-} 
- 
-#header .pc-nav li.menu__single ul.menu__second-level li a:hover { 
- transition: .4s; 
- color: #9e9e9e; 
-} 
- 
-#header .pc-nav li.menu__single ul.menu__second-level li a:hover::after { 
- display: none; 
-} 
- 
- 
+-------------------------*/
+
+.pc-nav {
+    width: 100%;
+    background: var(--bg-white);
+}
+
+.pc-nav ul {
+    padding: 2em 0;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.pc-nav li {
+    line-height: 31px;
+    font-size: 14px;
+    position: relative;
+    vertical-align: top;
+    text-align: center;
+    position: relative;
+}
+
+.pc-nav li a {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    padding: 1em 0em 0em;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+}
+
+.pc-nav li a:link,
+.pc-nav li a:visited {
+    color: var(--text-dark);
+}
+
+.pc-nav li a:hover,
+.pc-nav li a:active {
+    color: var(--primary-green);
+    text-decoration: none;
+}
+
+.pc-nav li a::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background: url(https://www.kazamidori28.com/images/common/nav_line.png) no-repeat 0 0 / cover;
+    width: 8px;
+    height: 13px;
+    right: -35%;
+    top: 50%;
+}
+
+.pc-nav li:first-child a::after {
+    right: -85%;
+}
+
+.pc-nav li:nth-child(4) a::after {
+    right: -30%;
+}
+
+.pc-nav li:nth-child(5) a::after {
+    right: -30%;
+}
+
+.pc-nav li:nth-child(6) a::after {
+    display: none;
+}
+
+.pc-nav li.on a {
+    color: var(--primary-green);
+    border-bottom: 2px solid var(--primary-green);
+}
+
+#header .pc-nav li a:hover {
+    color: var(--primary-green);
+    border-bottom: 2px solid var(--primary-green);
+}
+
+.h_telbox {
+    width: 52%;
+    margin-right: 0;
+    margin-left: auto;
+    padding-top: 0.5em;
+    max-width: 450px;
+    /* min-width: 410px; */
+    width: 410px;
+    /* float: right; */
+}
+
+.pc-nav li.pn {
+    display: none;
+}
+
+.pc-nav ul.menu__second-level {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.pc-nav ul>li.menu__single {
+    position: relative;
+    background: none;
+}
+
+.pc-nav li.menu__single ul.menu__second-level {
+    position: absolute;
+    width: 162%;
+    background: #00000080;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    z-index: 99999999;
+}
+
+.pc-nav li.menu__single:hover ul.menu__second-level {
+    top: 61px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.pc-nav ul.menu__second-level li {
+    border-left: none !important;
+    color: #FFF;
+    width: 100%;
+    height: 50px;
+    line-height: 70px;
+    font-size: 0.9em;
+}
+
+.pc-nav li.menu__single:hover ul.menu__second-level li a,
+.pc-nav li.menu__single ul.menu__second-level li a {
+    background: none;
+    color: #FFF;
+    padding: 0px 0 0 16%;
+    text-align: left;
+    line-height: 50px;
+    background: url(https://www.kazamidori28.com/images/common/nav_bd.png) no-repeat bottom center;
+}
+
+.pc-nav li.menu__single ul.menu__second-level li:last-child a {
+    background: none;
+}
+
+#header .pc-nav li.menu__single ul.menu__second-level li a:hover {
+    transition: .4s;
+    color: #9e9e9e;
+}
+
+#header .pc-nav li.menu__single ul.menu__second-level li a:hover::after {
+    display: none;
+}
+
+
 /* main-visual 
--------------------------*/ 
- 
-.topmainbox-wrap { 
- height: 100%; 
- max-height: 700px; 
- position: relative; 
- z-index: 222; 
-} 
- 
-.maintxt { 
- position: absolute; 
- z-index: 222; 
- width: 100%; 
- padding-left: 40%; 
- left: 0; 
- right: 0; 
- padding-right: 10%; 
- bottom: 17%; 
- margin: 0 auto; 
- max-width: 1800px; 
-} 
- 
-.maintxt img { 
- width: 100%; 
- height: auto; 
- max-width: 500px; 
-} 
- 
-#slider li.main01, 
-#slider li.main02, 
-#slider li.main03 { 
- background: url(https://www.kazamidori28.com/images/top/main_bg.jpg) no-repeat top center /cover; 
- /* height:65vh; */ 
- min-height: 660px; 
-} 
- 
-#slider li.main02, 
-#slider li.main03 { 
- display: none; 
-} 
- 
-#slider li.main02 { 
- background: url(https://www.kazamidori28.com/images/top/main_bg02.jpg) no-repeat top center /cover; 
-} 
- 
-#slider li.main03 { 
- background: url(https://www.kazamidori28.com/images/top/main_bg03.jpg) no-repeat top center /cover; 
-} 
- 
- 
+-------------------------*/
+
+.topmainbox-wrap {
+    height: 100%;
+    max-height: 700px;
+    position: relative;
+    z-index: 222;
+}
+
+.maintxt {
+    position: absolute;
+    z-index: 222;
+    width: 100%;
+    padding-left: 40%;
+    left: 0;
+    right: 0;
+    padding-right: 10%;
+    bottom: 17%;
+    margin: 0 auto;
+    max-width: 1800px;
+}
+
+.maintxt img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+}
+
+#slider li.main01,
+#slider li.main02,
+#slider li.main03 {
+    background: url(https://www.kazamidori28.com/images/top/main_bg.jpg) no-repeat top center /cover;
+    /* height:65vh; */
+    min-height: 660px;
+}
+
+#slider li.main02,
+#slider li.main03 {
+    display: none;
+}
+
+#slider li.main02 {
+    background: url(https://www.kazamidori28.com/images/top/main_bg02.jpg) no-repeat top center /cover;
+}
+
+#slider li.main03 {
+    background: url(https://www.kazamidori28.com/images/top/main_bg03.jpg) no-repeat top center /cover;
+}
+
+
 /* radius_btn 
--------------------------*/ 
- 
-.radius_btn { 
- display: block; 
- color: #ffffff; 
- transition: .4s; 
- font-size: 1em; 
- font-weight: 300; 
- background: url(https://www.kazamidori28.com/images/common/arw.png) no-repeat #618801; 
- padding: 0em 0 0 0; 
- margin: 2em auto 0; 
- border-radius: 5em; 
- position: relative; 
- letter-spacing: 0.1em; 
- text-align: center; 
- text-transform: uppercase; 
- background-repeat: no-repeat; 
- line-height: 4em; 
- width: 240px; 
- background-position: 90% 50%; 
-} 
- 
-.radius_btn:link, 
-.radius_btn:visited { 
- color: #FFF; 
-} 
- 
-.radius_btn:hover { 
- color: #FFF; 
- text-decoration: none; 
- opacity: 0.8; 
- background-color: #3e3e3e9e; 
- background-position: 92% 50%; 
-} 
- 
- 
+-------------------------*/
+
+.radius_btn {
+    display: block;
+    color: #ffffff;
+    transition: .4s;
+    font-size: 1em;
+    font-weight: 300;
+    background: url(https://www.kazamidori28.com/images/common/arw.png) no-repeat #618801;
+    padding: 0em 0 0 0;
+    margin: 2em auto 0;
+    border-radius: 5em;
+    position: relative;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+    background-repeat: no-repeat;
+    line-height: 4em;
+    width: 240px;
+    background-position: 90% 50%;
+}
+
+.radius_btn:link,
+.radius_btn:visited {
+    color: #FFF;
+}
+
+.radius_btn:hover {
+    color: #FFF;
+    text-decoration: none;
+    opacity: 0.8;
+    background-color: #3e3e3e9e;
+    background-position: 92% 50%;
+}
+
+
 /* pagetop 
--------------------------*/ 
- 
-#totop { 
- background: #5c5c5c; 
-} 
- 
-#totop a { 
- display: inline-block; 
- padding: 2em 0; 
- width: 100%; 
-} 
- 
- 
+-------------------------*/
+
+#totop {
+    background: #5c5c5c;
+}
+
+#totop a {
+    display: inline-block;
+    padding: 2em 0;
+    width: 100%;
+}
+
+
 /* footer 
--------------------------*/ 
- 
-footer a:link { 
- color: #ffffff; 
-} 
- 
-#footer { 
- /* padding-top: 2em; */ 
- background: #ffffff; 
-} 
- 
-.footer_inner { 
- max-width: 1100px; 
- margin: 0 auto; 
- padding-bottom: 1em; 
-} 
- 
-.ft_info { 
- width: 31%; 
- border-right: 1px solid #223043; 
-} 
- 
-.ft_logo { 
- text-align: left 
-} 
- 
-.ft_nav { 
- margin-right: 0; 
- width: 100%; 
- padding: 1em 0 2em; 
-} 
- 
-.ft_nav>ul { 
- padding: 0em 0 0.5em; 
- text-align: center; 
- width: 100%; 
-} 
- 
-.ft_nav>ul li { 
- display: inline-block; 
- background: url(https://www.kazamidori28.com/images/common/ft_bar.gif) no-repeat 0% 40%; 
- text-align: center; 
-} 
- 
-.ft_nav>ul:first-child li { 
- width: calc(100% / 5); 
-} 
- 
-.ft_nav>ul:nth-child(2) li { 
- width: calc(100% / 6); 
-} 
- 
-.ft_nav>ul li a { 
- padding: 0; 
- width: 100%; 
-} 
- 
-.ft_nav>ul li:first-child { 
- background: none; 
-} 
- 
-.ft_nav a { 
- display: block; 
- line-height: 2em; 
- margin: 0 auto; 
-} 
- 
-.ft_nav a:link, 
-.ft_nav a:visited, 
-.ft_nav a:hover, 
-.ft_nav a:active { 
- color: #272727; 
- /* line-height: 1.5em; */ 
- font-size: 0.85em; 
-} 
- 
-#footer p { 
- font-size: 0.8em; 
- /* font-weight: 600; */ 
- color: #fff; 
- text-align: left; 
-} 
- 
-.copyright { 
- padding: 1em 1% 1em; 
- width: 100%; 
- margin: 0 auto; 
- text-align: center; 
- background: #618801; 
-} 
- 
-footer .copyright address { 
- text-align: center; 
- color: #ffffff; 
-} 
- 
- 
+-------------------------*/
+
+footer a:link {
+    color: #ffffff;
+}
+
+#footer {
+    /* padding-top: 2em; */
+    background: #ffffff;
+}
+
+.footer_inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 1em;
+}
+
+.ft_info {
+    width: 31%;
+    border-right: 1px solid #223043;
+}
+
+.ft_logo {
+    text-align: left
+}
+
+.ft_nav {
+    margin-right: 0;
+    width: 100%;
+    padding: 1em 0 2em;
+}
+
+.ft_nav>ul {
+    padding: 0em 0 0.5em;
+    text-align: center;
+    width: 100%;
+}
+
+.ft_nav>ul li {
+    display: inline-block;
+    background: url(https://www.kazamidori28.com/images/common/ft_bar.gif) no-repeat 0% 40%;
+    text-align: center;
+}
+
+.ft_nav>ul:first-child li {
+    width: calc(100% / 5);
+}
+
+.ft_nav>ul:nth-child(2) li {
+    width: calc(100% / 6);
+}
+
+.ft_nav>ul li a {
+    padding: 0;
+    width: 100%;
+}
+
+.ft_nav>ul li:first-child {
+    background: none;
+}
+
+.ft_nav a {
+    display: block;
+    line-height: 2em;
+    margin: 0 auto;
+}
+
+.ft_nav a:link,
+.ft_nav a:visited,
+.ft_nav a:hover,
+.ft_nav a:active {
+    color: #272727;
+    /* line-height: 1.5em; */
+    font-size: 0.85em;
+}
+
+#footer p {
+    font-size: 0.8em;
+    /* font-weight: 600; */
+    color: #fff;
+    text-align: left;
+}
+
+.copyright {
+    padding: 1em 1% 1em;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background: #618801;
+}
+
+footer .copyright address {
+    text-align: center;
+    color: #ffffff;
+}
+
+
 /*============================= 
 Common-class 
-===============================*/ 
- 
- 
-/* float */ 
- 
-.fLeft { 
- float: left; 
-} 
- 
-.fRight { 
- float: right; 
-} 
- 
- 
-/* float-clear */ 
- 
-.clear { 
- clear: both; 
-} 
- 
-br.clear { 
- height: 0; 
- line-height: 0; 
- font-size: 0; 
-} 
- 
- 
-/* image-layout */ 
- 
-.imgleft { 
- float: left; 
-} 
- 
-.imgleft img { 
- display: block; 
-} 
- 
-.imgright { 
- float: right; 
-} 
- 
-.imgright img { 
- display: block; 
-} 
- 
- 
-/* table-default-style */ 
- 
- 
-/* Bread_crumb_List */ 
- 
- 
-/* bread_crumb */ 
- 
-.bread_crumb_list { 
- margin: 0; 
- padding: 10px 0px; 
- text-align: left; 
- background: #618801; 
- color: #fff; 
-} 
- 
-.bread_crumb_list ul.bread_crumb { 
- margin: 0 auto; 
- max-width: 1040px; 
- width: 96%; 
-} 
- 
-.bread_crumb li { 
- display: inline; 
-} 
- 
-.bread_crumb li:after { 
- content: '>'; 
- padding-left: 5px; 
-} 
- 
-.bread_crumb li:last-child:after { 
- content: ''; 
-} 
- 
-.bread_crumb li.current { 
- font-weight: bold; 
-} 
- 
-.bread_crumb_list a { 
- color: #fff; 
-} 
- 
- 
+===============================*/
+
+
+/* float */
+
+.fLeft {
+    float: left;
+}
+
+.fRight {
+    float: right;
+}
+
+
+/* float-clear */
+
+.clear {
+    clear: both;
+}
+
+br.clear {
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+}
+
+
+/* image-layout */
+
+.imgleft {
+    float: left;
+}
+
+.imgleft img {
+    display: block;
+}
+
+.imgright {
+    float: right;
+}
+
+.imgright img {
+    display: block;
+}
+
+
+/* table-default-style */
+
+
+/* Bread_crumb_List */
+
+
+/* bread_crumb */
+
+.bread_crumb_list {
+    margin: 0;
+    padding: 10px 0px;
+    text-align: left;
+    background: #618801;
+    color: #fff;
+}
+
+.bread_crumb_list ul.bread_crumb {
+    margin: 0 auto;
+    max-width: 1040px;
+    width: 96%;
+}
+
+.bread_crumb li {
+    display: inline;
+}
+
+.bread_crumb li:after {
+    content: '>';
+    padding-left: 5px;
+}
+
+.bread_crumb li:last-child:after {
+    content: '';
+}
+
+.bread_crumb li.current {
+    font-weight: bold;
+}
+
+.bread_crumb_list a {
+    color: #fff;
+}
+
+
 /*============================= 
 TopPage setting 
-===============================*/ 
- 
-h3 { 
- color: #618801; 
- font-size: 1.7em; 
- line-height: 1.4em; 
- text-align: center; 
- letter-spacing: 0.18em; 
- margin-bottom: 0.8em; 
- font-weight: 500; 
- font-family: 'Noto Sans-Japanese', sans-serif; 
- text-transform: uppercase; 
- margin-right: auto; 
-} 
- 
-h3 span { 
- display: block; 
- letter-spacing: 0.1em; 
- color: #3e3e3e; 
- font-weight: 600; 
- font-size: 0.58em; 
- line-height: 2em; 
- text-align: center; 
- /* font-family: 'Noto Serif Japanese', serif; */ 
-} 
- 
-h4 { 
- font-size: 1.25em; 
- letter-spacing: 0.08em; 
- font-weight: 400; 
- line-height: 1.6em; 
- padding: 0 0 1em; 
- font-family: 'Noto Serif Japanese', serif; 
-} 
- 
-section { 
- max-width: 1110px; 
- margin: 0 auto; 
- width: 99%; 
- padding: 6em 0px 3em; 
- text-align: center; 
-} 
- 
-#wrap-content p { 
- font-size: 0.95em; 
- margin-bottom: 3em; 
- margin-top: 0.2em; 
- line-height: 2em; 
- font-weight: 400; 
- text-align: left; 
- letter-spacing: 0.08em; 
-} 
- 
- 
-/* flex */ 
- 
-.flex { 
- display: -moz-flex; 
- display: -webkit-flex; 
- display: flex; 
- -moz-flex-flow: row wrap; 
- -webkit-flex-flow: row wrap; 
- flex-flow: row wrap; 
- -moz-justify-content: space-between; 
- -webkit-justify-content: space-between; 
- justify-content: space-between; 
-} 
- 
-.flexno { 
- display: -moz-flex; 
- display: -webkit-flex; 
- display: flex; 
- -moz-flex-flow: row nowrap; 
- -webkit-flex-flow: row nowrap; 
- flex-flow: row nowrap; 
- -moz-justify-content: space-between; 
- -webkit-justify-content: space-between; 
- justify-content: space-between; 
-} 
- 
-.flex-st { 
- display: -moz-flex; 
- display: -webkit-flex; 
- display: flex; 
- -moz-flex-flow: row wrap; 
- -webkit-flex-flow: row wrap; 
- flex-flow: row wrap; 
- -moz-justify-content: flex-start; 
- -webkit-justify-content: flex-start; 
- justify-content: flex-start; 
-} 
- 
-.flexno-st { 
- display: -moz-flex; 
- display: -webkit-flex; 
- display: flex; 
- -moz-flex-flow: row nowrap; 
- -webkit-flex-flow: row nowrap; 
- flex-flow: row nowrap; 
- -moz-justify-content: flex-start; 
- -webkit-justify-content: flex-start; 
- justify-content: flex-start; 
-} 
- 
-.flex--cen--cen { 
- display: -webkit-box; 
- display: -ms-flexbox; 
- display: -webkit-flex; 
- display: flex; 
- -ms-flex-wrap: wrap; 
- -webkit-flex-wrap: wrap; 
- flex-wrap: wrap; 
- -webkit-box-align: center; 
- -ms-flex-align: center; 
- -webkit-align-items: center; 
- align-items: center; 
- justify-content: center; 
-} 
- 
-.flex--around--cen { 
- display: -moz-flex; 
- display: -webkit-flex; 
- display: flex; 
- -moz-flex-flow: row wrap; 
- -webkit-flex-flow: row wrap; 
- flex-flow: row wrap; 
- -moz-justify-content: space-around; 
- -webkit-justify-content: space-around; 
- -ms-flex-align: center; 
- -webkit-align-items: center; 
- align-items: center; 
- justify-content: space-around; 
-} 
- 
-.flex--around { 
- display: -moz-flex; 
- display: -webkit-flex; 
- display: flex; 
- -moz-flex-flow: row wrap; 
- -webkit-flex-flow: row wrap; 
- flex-flow: row wrap; 
- -moz-justify-content: space-around; 
- -webkit-justify-content: space-around; 
- justify-content: space-around; 
-} 
- 
-#pagebody { 
- background: none; 
- text-align: left; 
- z-index: 1; 
- position: relative; 
-} 
- 
-#greeting { 
- background: url(https://www.kazamidori28.com/images/top/greeting_bg.jpg) no-repeat center top / cover; 
- padding-bottom: 5em; 
- padding-top: 1em; 
-} 
- 
-#greeting h3 { 
- background: url(https://www.kazamidori28.com/images/top/greeting_ico.png) no-repeat top center / 20%, url(https://www.kazamidori28.com/images/top/greeting_line.png) no-repeat bottom center; 
- padding-top: 5em; 
- padding-bottom: 0.7em; 
- margin-bottom: 1em; 
-} 
- 
-#greeting p { 
- text-align: center; 
-} 
- 
-.greeting_inner { 
- background: #ffffffa6; 
- background: linear-gradient(#ffffff00 0%, #ffffff00 5%, #ffffffc9 5%, #ffffffc9 100%); 
- content: ""; 
- display: inline-block; 
- width: 80%; 
- max-width: 810px; 
- padding-bottom: 4em; 
- padding-right: 3%; 
- padding-left: 3%; 
-} 
- 
-.greeting .radius_btn { 
- font-size: 0.9em; 
-} 
- 
-#shop { 
- background: linear-gradient(#618801 0%, #618801 80%, #ffffff 80%, #ffffff 100%); 
-} 
- 
-.shop { 
- padding-top: 4em; 
-} 
- 
-#shop h3 { 
- color: #FFF; 
- background: url(https://www.kazamidori28.com/images/top/shop_h3.png) no-repeat top center / 30%; 
- padding-top: 10%; 
- max-width: 24em; 
- margin: 0 auto 1.5em; 
-} 
- 
-#shop p { 
- color: #FFF; 
- max-width: 40em; 
- margin: 0 auto; 
-} 
- 
-#shop ul { 
- margin-top: 4em; 
-} 
- 
-#shop ul li { 
- width: 31%; 
-} 
- 
-#shop ul li p { 
- font-size: 1.2em; 
- text-align: center; 
- display: inline-block; 
- width: 100%; 
- padding: 8%; 
- position: relative; 
-} 
- 
-#shop ul li p span { 
- font-size: 1.8em; 
- display: block; 
- font-family: 'Open Sans'; 
- font-weight: 900; 
-} 
- 
-#shop ul li p::after { 
- content: ""; 
- display: inline-block; 
- width: 3em; 
- height: 5px; 
- background: #618801; 
- position: absolute; 
- bottom: 32%; 
- right: 0; 
- left: 0; 
- margin: 0 auto; 
-} 
- 
-#shop ul li a { 
- width: 100%; 
- display: inline-block; 
- height: 100%; 
- background: #ffffffa1; 
- padding: 5em 0 6em; 
-} 
- 
-#shop ul li a:hover { 
- text-decoration: none; 
- transition: .4s; 
- background: none; 
- color: #fff; 
-} 
- 
-#shop ul li:first-child p { 
- background: url(https://www.kazamidori28.com/images/top/menu_list.jpg) no-repeat top center / cover; 
-} 
- 
-#shop ul li:nth-child(2) p { 
- background: url(https://www.kazamidori28.com/images/top/menu_drink.jpg) no-repeat top center / cover; 
-} 
- 
-#shop ul li:nth-child(3) p { 
- background: url(https://www.kazamidori28.com/images/top/menu_course.jpg) no-repeat top center / cover; 
-} 
- 
-#news { 
- /* padding-top: 4em; */ 
- /* padding-bottom: 4em; */ 
- position: relative; 
-} 
- 
-#news h3 { 
- margin-bottom: 0em; 
- text-align: center; 
- padding-top: 0.3em; 
- width: 100%; 
-} 
- 
-#ig { 
- width: 50%; 
- display: inline-block; 
- border: 2px solid #125688; 
- font-size: 0.95em; 
- /* padding: inherit; */ 
- margin-left: 0; 
- position: relative; 
- /* height:50em; */ 
-} 
- 
-#ig iframe { 
- width: 100%; 
- height: 100%; 
-} 
- 
-#ig::after { 
- content: ""; 
- display: inline-block; 
- width: 10em; 
- height: 10px; 
- background: #125688; 
- position: absolute; 
- top: -6px; 
- left: 0; 
- right: 0; 
- margin: 0 auto; 
-} 
- 
-.info_rBox { 
- /* width: 45%; */ 
- width: 100%; 
- /* display: inline-block; */ 
-} 
- 
-.news { 
- border: 2px solid #850303; 
- font-size: 0.95em; 
- padding: 5%; 
- margin-left: 0; 
- position: relative; 
- /* margin-bottom: 3em; */ 
- width: 48%; 
-} 
- 
-.news::after { 
- content: ""; 
- display: inline-block; 
- width: 10em; 
- height: 10px; 
- background: #850303; 
- position: absolute; 
- top: -6px; 
- left: 0; 
- right: 0; 
- margin: 0 auto; 
-} 
- 
-.news h3 { 
- color: #850303; 
-} 
- 
-.news .radius_btn { 
- background-color: #850303; 
-} 
- 
-.blog { 
- border: 2px solid #125688; 
- font-size: 0.95em; 
- padding: 5%; 
- margin-left: 0; 
- position: relative; 
- width: 48%; 
-} 
- 
-.blog::after { 
- content: ""; 
- display: inline-block; 
- width: 10em; 
- height: 10px; 
- background: #125688; 
- position: absolute; 
- top: -6px; 
- left: 0; 
- right: 0; 
- margin: 0 auto; 
-} 
- 
-.blog .radius_btn { 
- background-color: #125688; 
-} 
- 
-.blog h3 { 
- color: #125688; 
-} 
- 
-.insta { 
- margin-top: 3em; 
-} 
- 
-#news dl { 
- width: 100%; 
- padding-top: 1.5em; 
- overflow: hidden; 
-} 
- 
-#news dt a { 
- color: #2d2d2d; 
-} 
- 
-#news dt { 
- width: 100px; 
- text-align: left; 
- font-weight: 500; 
- font-size: 0.85em; 
- float: left; 
- display: inline-block; 
-} 
- 
-#news dd { 
- width: 75%; 
- float: right; 
- display: inline-block; 
-} 
- 
-#news dd a { 
- width: 100%; 
- display: block; 
- overflow: hidden; 
- font-size: 0.85em; 
- font-weight: 400; 
- line-height: 1.7em; 
- /* letter-spacing: 0.08em; */ 
- /* padding-top: 1em; */ 
- color: #2d2d2d; 
- text-align: left; 
- text-decoration: underline; 
-} 
- 
-#news .radius_btn { 
- width: 240px; 
-} 
- 
-#reservation { 
- background: url(https://www.kazamidori28.com/images/top/reservation_img.png) no-repeat 80% 100%, linear-gradient(#FFF 0%, #FFF 28%, #f3f6ec 28%, #f3f6ec 100%); 
- padding-bottom: 4em; 
-} 
- 
-#reservation h3 { 
- background: url(https://www.kazamidori28.com/images/top/reservation_h3.png) no-repeat 50% 0%, url(https://www.kazamidori28.com/images/top/reservation_line.png) no-repeat bottom center; 
- padding-top: 5.5em; 
- padding-bottom: 0.7em; 
- margin-bottom: 2em; 
- color: #259025; 
-} 
- 
-#reservation p { 
- max-width: 33em; 
-} 
- 
-#reservation .radius_btn { 
- background-color: #ff7800; 
- margin-left: 0; 
-} 
- 
- 
+===============================*/
+
+h3 {
+    color: var(--primary-green);
+    font-size: 1.8em;
+    line-height: 1.4;
+    text-align: center;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.8em;
+    font-weight: 500;
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    margin-right: auto;
+}
+
+h3 span {
+    display: block;
+    letter-spacing: 0.1em;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 0.55em;
+    line-height: 2;
+    text-align: center;
+}
+
+h4 {
+    font-size: 1.3em;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+    line-height: 1.6;
+    padding: 0 0 1em;
+    font-family: var(--font-serif);
+}
+
+section {
+    max-width: 1110px;
+    margin: 0 auto;
+    width: 99%;
+    padding: 6em 0px 3em;
+    text-align: center;
+}
+
+#wrap-content p {
+    font-size: 1rem;
+    margin-bottom: var(--space-md);
+    margin-top: 0.2rem;
+    line-height: 1.8;
+    font-weight: 400;
+    text-align: left;
+    letter-spacing: 0.05em;
+    color: var(--text-dark);
+}
+
+
+/* flex */
+
+.flex {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -moz-flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -moz-justify-content: space-between;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+.flexno {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -moz-flex-flow: row nowrap;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -moz-justify-content: space-between;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+.flex-st {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -moz-flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -moz-justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+
+.flexno-st {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -moz-flex-flow: row nowrap;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -moz-justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+
+.flex--cen--cen {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex--around--cen {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -moz-flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -moz-justify-content: space-around;
+    -webkit-justify-content: space-around;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.flex--around {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -moz-flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -moz-justify-content: space-around;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+}
+
+#pagebody {
+    background: none;
+    text-align: left;
+    z-index: 1;
+    position: relative;
+}
+
+#greeting {
+    background: url(https://www.kazamidori28.com/images/top/greeting_bg.jpg) no-repeat center top / cover;
+    padding-bottom: 5em;
+    padding-top: 1em;
+}
+
+#greeting h3 {
+    background: url(https://www.kazamidori28.com/images/top/greeting_ico.png) no-repeat top center / 20%, url(https://www.kazamidori28.com/images/top/greeting_line.png) no-repeat bottom center;
+    padding-top: 5em;
+    padding-bottom: 0.7em;
+    margin-bottom: 1em;
+}
+
+#greeting p {
+    text-align: center;
+}
+
+.greeting_inner {
+    background: var(--bg-overlay);
+    display: inline-block;
+    width: 85%;
+    max-width: 840px;
+    padding: var(--space-lg) 5%;
+    border-radius: 8px;
+    box-shadow: var(--shadow-md);
+}
+
+.greeting .radius_btn {
+    font-size: 1rem;
+    padding: var(--space-sm) var(--space-lg);
+}
+
+#shop {
+    background: linear-gradient(#618801 0%, #618801 80%, #ffffff 80%, #ffffff 100%);
+}
+
+.shop {
+    padding-top: 4em;
+}
+
+#shop h3 {
+    color: #FFF;
+    background: url(https://www.kazamidori28.com/images/top/shop_h3.png) no-repeat top center / 30%;
+    padding-top: 10%;
+    max-width: 24em;
+    margin: 0 auto 1.5em;
+}
+
+#shop p {
+    color: #FFF;
+    max-width: 40em;
+    margin: 0 auto;
+}
+
+#shop ul {
+    margin-top: 4em;
+}
+
+#shop ul li {
+    width: 31%;
+}
+
+#shop ul li p {
+    font-size: 1.2em;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    padding: 8%;
+    position: relative;
+}
+
+#shop ul li p span {
+    font-size: 1.8em;
+    display: block;
+    font-family: 'Open Sans';
+    font-weight: 900;
+}
+
+#shop ul li p::after {
+    content: "";
+    display: inline-block;
+    width: 3rem;
+    height: 3px;
+    background: var(--primary-green);
+    position: absolute;
+    bottom: 30%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+#shop ul li a {
+    width: 100%;
+    display: inline-block;
+    height: 100%;
+    background: #ffffffa1;
+    padding: 5em 0 6em;
+}
+
+#shop ul li a:hover {
+    text-decoration: none;
+    transition: .4s;
+    background: none;
+    color: #fff;
+}
+
+#shop ul li:first-child p {
+    background: url(https://www.kazamidori28.com/images/top/menu_list.jpg) no-repeat top center / cover;
+}
+
+#shop ul li:nth-child(2) p {
+    background: url(https://www.kazamidori28.com/images/top/menu_drink.jpg) no-repeat top center / cover;
+}
+
+#shop ul li:nth-child(3) p {
+    background: url(https://www.kazamidori28.com/images/top/menu_course.jpg) no-repeat top center / cover;
+}
+
+#news {
+    /* padding-top: 4em; */
+    /* padding-bottom: 4em; */
+    position: relative;
+}
+
+#news h3 {
+    margin-bottom: var(--space-md);
+    text-align: center;
+    padding-top: 0.5em;
+    width: 100%;
+}
+
+#ig {
+    width: 50%;
+    display: inline-block;
+    border: 2px solid #125688;
+    font-size: 0.95em;
+    /* padding: inherit; */
+    margin-left: 0;
+    position: relative;
+    /* height:50em; */
+}
+
+#ig iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#ig::after {
+    content: "";
+    display: inline-block;
+    width: 10em;
+    height: 10px;
+    background: #125688;
+    position: absolute;
+    top: -6px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.info_rBox {
+    /* width: 45%; */
+    width: 100%;
+    /* display: inline-block; */
+}
+
+.news {
+    border: 2px solid #850303;
+    font-size: 0.95em;
+    padding: 5%;
+    margin-left: 0;
+    position: relative;
+    /* margin-bottom: 3em; */
+    width: 48%;
+}
+
+.news::after {
+    content: "";
+    display: inline-block;
+    width: 10em;
+    height: 10px;
+    background: #850303;
+    position: absolute;
+    top: -6px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.news h3 {
+    color: #850303;
+}
+
+.news .radius_btn {
+    background-color: #850303;
+}
+
+.blog {
+    border: 2px solid #125688;
+    font-size: 0.95em;
+    padding: 5%;
+    margin-left: 0;
+    position: relative;
+    width: 48%;
+    border-radius: 8px;
+}
+
+.blog::after {
+    content: "";
+    display: inline-block;
+    width: 10em;
+    height: 10px;
+    background: #125688;
+    position: absolute;
+    top: -6px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.blog .radius_btn {
+    background-color: #125688;
+}
+
+.blog h3 {
+    color: #125688;
+}
+
+.insta {
+    margin-top: 3em;
+    width: 100%;
+    text-align: center;
+}
+
+.insta-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8em;
+    padding: 1.2em 2.5em;
+    background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+    border-radius: 12px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1em;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.insta-link:hover {
+    text-decoration: none;
+    background: linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.insta-icon {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+}
+
+.insta-text {
+    font-family: 'Noto Sans Japanese', sans-serif;
+    line-height: 1.4;
+}
+
+#news dl {
+    width: 100%;
+    padding-top: 1.5em;
+    overflow: hidden;
+}
+
+#news dt a {
+    color: #2d2d2d;
+}
+
+#news dt {
+    width: 100px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 0.85em;
+    float: left;
+    display: inline-block;
+}
+
+#news dd {
+    width: 75%;
+    float: right;
+    display: inline-block;
+}
+
+#news dd a {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    font-size: 0.85em;
+    font-weight: 400;
+    line-height: 1.7em;
+    /* letter-spacing: 0.08em; */
+    /* padding-top: 1em; */
+    color: #2d2d2d;
+    text-align: left;
+    text-decoration: underline;
+}
+
+#news .radius_btn {
+    width: 240px;
+}
+
+#reservation {
+    background: url(https://www.kazamidori28.com/images/top/reservation_img.png) no-repeat 80% 100%, linear-gradient(var(--bg-white) 0%, var(--bg-white) 28%, #f3f6ec 28%, #f3f6ec 100%);
+    padding-bottom: var(--space-lg);
+}
+
+#reservation h3 {
+    background: url(https://www.kazamidori28.com/images/top/reservation_h3.png) no-repeat 50% 0%, url(https://www.kazamidori28.com/images/top/reservation_line.png) no-repeat bottom center;
+    padding-top: 5.5em;
+    padding-bottom: 0.7em;
+    margin-bottom: 2em;
+    color: var(--primary-green);
+}
+
+#reservation p {
+    max-width: 33em;
+}
+
+#reservation .radius_btn {
+    background-color: var(--accent-orange);
+    margin-left: 0;
+}
+
+
 /*============================= 
 Sub(Lower)Page setting 
-===============================*/ 
- 
- 
+===============================*/
+
+
 /*============================= 
 下層共通 
-===============================*/ 
- 
- 
-/* sub_visual */ 
- 
-#sub_visual { 
- display: flex; 
- justify-content: center; 
- align-items: center; 
- height: 370px; 
- background: url(https://www.kazamidori28.com/images/common/sub_visual.jpg) no-repeat center center/cover; 
-} 
- 
- 
-/* レイアウト */ 
- 
-.subpage { 
- text-align: left; 
- line-height: 2; 
-} 
- 
-.subcontents { 
- margin-top: 80px; 
- padding-bottom: 80px; 
-} 
- 
-.subWrap { 
- margin: 0 auto; 
- width: 96%; 
- max-width: 1200px; 
-} 
- 
- 
-/* 見出しスタイル */ 
- 
-.subTtlA { 
- font-size: 20px; 
- font-weight: 400; 
- text-transform: uppercase; 
- color: #383838; 
- line-height: 2.3; 
- text-align: center; 
- background: rgba(255, 255, 255, 0.58); 
- padding: 1em 1.5em; 
-} 
- 
-.subTtlA span { 
- font-family: 'Open Sans'; 
- display: block; 
- font-size: 40px; 
- font-weight: 600; 
- color: #618801; 
- border-bottom: 2px dashed; 
- line-height: 1.5; 
- letter-spacing: 0.05em; 
-} 
- 
-.subTtlB { 
- margin: 80px 0 40px; 
- font-size: 30px; 
- font-weight: 400; 
- text-transform: uppercase; 
- color: #222; 
- font-family: 'Open Sans'; 
- line-height: 1.3; 
- letter-spacing: 0.05em; 
-} 
- 
-.subTtlB span { 
- display: block; 
- font-size: 16px; 
-} 
- 
-.subTtlB::first-letter { 
- color: #618801; 
-} 
- 
- 
-/* テキスト */ 
- 
-.ff01 { 
- font-family: 'Open Sans'; 
-} 
- 
-.txtArea p:not(:first-child) { 
- margin-top: 1em; 
-} 
- 
- 
-/* テーブルスタイル */ 
- 
-table { 
- border-collapse: collapse; 
- width: 100%; 
-} 
- 
- 
-/* Table01 */ 
- 
-.Table01 th, 
-.Table01 td { 
- padding: 16px 32px; 
-} 
- 
-.Table01 th { 
- width: 32%; 
- height: 100%; 
- box-sizing: border-box; 
- font-weight: bold; 
- text-align: center; 
- border-top: dashed 1px #618801; 
-} 
- 
-.Table01 td { 
- width: 68%; 
- box-sizing: border-box; 
- text-align: left; 
- border-top: dashed 1px #d0d0d0; 
-} 
- 
-.Table01 tr:last-of-type th { 
- border-bottom: dashed 1px #618801; 
-} 
- 
-.Table01 tr:last-of-type td { 
- border-bottom: dashed 1px #d0d0d0; 
-} 
- 
- 
-/* Table02 */ 
- 
-.Table02 th, 
-.Table02 td { 
- padding: 8px 24px; 
-} 
- 
-.Table02 th { 
- width: 32%; 
- height: 100%; 
- box-sizing: border-box; 
- font-weight: bold; 
- text-align: left; 
- border-top: dashed 1px #618801; 
-} 
- 
-.Table02 td { 
- width: 68%; 
- box-sizing: border-box; 
- text-align: right; 
- border-top: dashed 1px #d0d0d0; 
-} 
- 
-.Table02 tr:last-of-type th { 
- border-bottom: dashed 1px #618801; 
-} 
- 
-.Table02 tr:last-of-type td { 
- border-bottom: dashed 1px #d0d0d0; 
-} 
- 
- 
-/* sub_contact */ 
- 
-.sub_contact { 
- padding: 2em 0; 
- background: #f3f6ec; 
- text-align: center; 
- line-height: 1.5; 
-} 
- 
-.sub_contact div { 
- margin: 0 auto; 
- width: 96%; 
- max-width: 1040px; 
-} 
- 
-.sub_contact ul li { 
- background: rgba(255, 255, 255, 0.6); 
- width: 48%; 
- padding: 1em; 
-} 
- 
-.sub_contact ul li.contact_mail .radius_btn { 
- margin-top: 24px; 
-} 
- 
-.sub_contact ul li p:first-child { 
- display: inline-block; 
- font-size: 1.5em; 
- border-bottom: 2px dashed #259025; 
- width: auto; 
-} 
- 
-.sub_contact ul li.contact_tel p:last-child { 
- margin-top: 24px; 
- font-family: 'Oswald'; 
- line-height: 64px; 
-} 
- 
-.sub_contact ul li.contact_tel p:last-child a { 
- font-size: 2em; 
- margin-left: 0.2em; 
-} 
- 
- 
-/* subBox01 */ 
- 
-ul.subBox01 li:nth-of-type(1) { 
- width: 60%; 
-} 
- 
-ul.subBox01 li:nth-of-type(2) { 
- width: 38%; 
- text-align: center; 
-} 
- 
- 
-/* subBox02 */ 
- 
-.subBox02 { 
- margin-top: 3em; 
-} 
- 
-.subBox02 li { 
- width: 30%; 
-} 
- 
- 
-/* redBox */ 
- 
-.redBox { 
- border: 2px solid #850303; 
- font-size: 0.95em; 
- padding: 5%; 
- margin-left: 0; 
- position: relative; 
- /* margin-bottom: 3em; */ 
-} 
- 
-.redBox::after { 
- content: ""; 
- display: inline-block; 
- width: 10em; 
- height: 10px; 
- background: #850303; 
- position: absolute; 
- top: -6px; 
- left: 0; 
- right: 0; 
- margin: 0 auto; 
-} 
- 
- 
-/* blueBox */ 
- 
-.blueBox { 
- border: 2px solid #125688; 
- font-size: 0.95em; 
- padding: 5%; 
- margin-left: 0; 
- position: relative; 
- /* margin-bottom: 3em; */ 
-} 
- 
-.blueBox::after { 
- content: ""; 
- display: inline-block; 
- width: 10em; 
- height: 10px; 
- background: #125688; 
- position: absolute; 
- top: -6px; 
- left: 0; 
- right: 0; 
- margin: 0 auto; 
-} 
- 
- 
-/* greenBox */ 
- 
-.greenBox { 
- border: 2px solid #618801; 
- font-size: 0.95em; 
- padding: 5%; 
- margin-left: 0; 
- position: relative; 
- /* margin-bottom: 3em; */ 
-} 
- 
-.greenBox::after { 
- content: ""; 
- display: inline-block; 
- width: 10em; 
- height: 10px; 
- background: #618801; 
- position: absolute; 
- top: -6px; 
- left: 0; 
- right: 0; 
- margin: 0 auto; 
-} 
- 
- 
+===============================*/
+
+
+/* sub_visual */
+
+#sub_visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 370px;
+    background: url(https://www.kazamidori28.com/images/common/sub_visual.jpg) no-repeat center center/cover;
+}
+
+
+/* レイアウト */
+
+.subpage {
+    text-align: left;
+    line-height: 2;
+}
+
+.subcontents {
+    margin-top: 80px;
+    padding-bottom: 80px;
+}
+
+.subWrap {
+    margin: 0 auto;
+    width: 96%;
+    max-width: 1200px;
+}
+
+
+/* 見出しスタイル */
+
+.subTtlA {
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #383838;
+    line-height: 2.3;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.58);
+    padding: 1em 1.5em;
+}
+
+.subTtlA span {
+    font-family: 'Open Sans';
+    display: block;
+    font-size: 40px;
+    font-weight: 600;
+    color: #618801;
+    border-bottom: 2px dashed;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+}
+
+.subTtlB {
+    margin: 80px 0 40px;
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #222;
+    font-family: 'Open Sans';
+    line-height: 1.3;
+    letter-spacing: 0.05em;
+}
+
+.subTtlB span {
+    display: block;
+    font-size: 16px;
+}
+
+.subTtlB::first-letter {
+    color: #618801;
+}
+
+
+/* テキスト */
+
+.ff01 {
+    font-family: 'Open Sans';
+}
+
+.txtArea p:not(:first-child) {
+    margin-top: 1em;
+}
+
+
+/* テーブルスタイル */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+/* Table01 */
+
+.Table01 th,
+.Table01 td {
+    padding: 16px 32px;
+}
+
+.Table01 th {
+    width: 32%;
+    height: 100%;
+    box-sizing: border-box;
+    font-weight: bold;
+    text-align: center;
+    border-top: dashed 1px #618801;
+}
+
+.Table01 td {
+    width: 68%;
+    box-sizing: border-box;
+    text-align: left;
+    border-top: dashed 1px #d0d0d0;
+}
+
+.Table01 tr:last-of-type th {
+    border-bottom: dashed 1px #618801;
+}
+
+.Table01 tr:last-of-type td {
+    border-bottom: dashed 1px #d0d0d0;
+}
+
+
+/* Table02 */
+
+.Table02 th,
+.Table02 td {
+    padding: 8px 24px;
+}
+
+.Table02 th {
+    width: 32%;
+    height: 100%;
+    box-sizing: border-box;
+    font-weight: bold;
+    text-align: left;
+    border-top: dashed 1px #618801;
+}
+
+.Table02 td {
+    width: 68%;
+    box-sizing: border-box;
+    text-align: right;
+    border-top: dashed 1px #d0d0d0;
+}
+
+.Table02 tr:last-of-type th {
+    border-bottom: dashed 1px #618801;
+}
+
+.Table02 tr:last-of-type td {
+    border-bottom: dashed 1px #d0d0d0;
+}
+
+
+/* sub_contact */
+
+.sub_contact {
+    padding: 2em 0;
+    background: #f3f6ec;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.sub_contact div {
+    margin: 0 auto;
+    width: 96%;
+    max-width: 1040px;
+}
+
+.sub_contact ul li {
+    background: rgba(255, 255, 255, 0.6);
+    width: 48%;
+    padding: 1em;
+}
+
+.sub_contact ul li.contact_mail .radius_btn {
+    margin-top: 24px;
+}
+
+.sub_contact ul li p:first-child {
+    display: inline-block;
+    font-size: 1.5em;
+    border-bottom: 2px dashed #259025;
+    width: auto;
+}
+
+.sub_contact ul li.contact_tel p:last-child {
+    margin-top: 24px;
+    font-family: 'Oswald';
+    line-height: 64px;
+}
+
+.sub_contact ul li.contact_tel p:last-child a {
+    font-size: 2em;
+    margin-left: 0.2em;
+}
+
+
+/* subBox01 */
+
+ul.subBox01 li:nth-of-type(1) {
+    width: 60%;
+}
+
+ul.subBox01 li:nth-of-type(2) {
+    width: 38%;
+    text-align: center;
+}
+
+
+/* subBox02 */
+
+.subBox02 {
+    margin-top: 3em;
+}
+
+.subBox02 li {
+    width: 30%;
+}
+
+
+/* redBox */
+
+.redBox {
+    border: 2px solid #850303;
+    font-size: 0.95em;
+    padding: 5%;
+    margin-left: 0;
+    position: relative;
+    /* margin-bottom: 3em; */
+}
+
+.redBox::after {
+    content: "";
+    display: inline-block;
+    width: 10em;
+    height: 10px;
+    background: #850303;
+    position: absolute;
+    top: -6px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+
+/* blueBox */
+
+.blueBox {
+    border: 2px solid #125688;
+    font-size: 0.95em;
+    padding: 5%;
+    margin-left: 0;
+    position: relative;
+    /* margin-bottom: 3em; */
+}
+
+.blueBox::after {
+    content: "";
+    display: inline-block;
+    width: 10em;
+    height: 10px;
+    background: #125688;
+    position: absolute;
+    top: -6px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+
+/* greenBox */
+
+.greenBox {
+    border: 2px solid #618801;
+    font-size: 0.95em;
+    padding: 5%;
+    margin-left: 0;
+    position: relative;
+    /* margin-bottom: 3em; */
+}
+
+.greenBox::after {
+    content: "";
+    display: inline-block;
+    width: 10em;
+    height: 10px;
+    background: #618801;
+    position: absolute;
+    top: -6px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+
 /* about 
--------------------------*/ 
- 
-.about02 ul:nth-of-type(2) { 
- margin-top: 56px; 
-} 
- 
- 
+-------------------------*/
+
+.about02 ul:nth-of-type(2) {
+    margin-top: 56px;
+}
+
+
 /* sub--menu 
 food / drink 共通 
--------------------------*/ 
- 
-.sub--menu ul.menuBox { 
- align-items: initial; 
-} 
- 
-.sub--menu ul.menuBox li { 
- width: 48%; 
-} 
- 
-.sub--menu table th { 
- width: 60%; 
- vertical-align: initial; 
-} 
- 
-.sub--menu table td { 
- width: 40%; 
-} 
- 
-.recommendTxt { 
- font-weight: bold; 
- text-align: center; 
- margin-bottom: 1.5em; 
-} 
- 
-.menuTtl { 
- color: #850303; 
-} 
- 
-span.recommend { 
- position: relative; 
-} 
- 
-span.recommend:before { 
- content: ""; 
- position: absolute; 
- background: #850303; 
- width: 1em; 
- height: 1em; 
- border-radius: 50%; 
- top: 0.8em; 
- left: -1.5em; 
- -webkit-transform: translateY(-50%); 
- transform: translateY(-50%); 
- z-index: -1; 
-} 
- 
-span.small { 
- font-size: 0.8em; 
- font-weight: normal; 
-} 
- 
-.sub--menu table td.select { 
- text-align: left; 
- border-bottom: 1px dashed #d0d0d0; 
-} 
- 
- 
+-------------------------*/
+
+.sub--menu ul.menuBox {
+    align-items: initial;
+}
+
+.sub--menu ul.menuBox li {
+    width: 48%;
+}
+
+.sub--menu table th {
+    width: 60%;
+    vertical-align: initial;
+}
+
+.sub--menu table td {
+    width: 40%;
+}
+
+.recommendTxt {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+.menuTtl {
+    color: #850303;
+}
+
+span.recommend {
+    position: relative;
+}
+
+span.recommend:before {
+    content: "";
+    position: absolute;
+    background: #850303;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    top: 0.8em;
+    left: -1.5em;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+span.small {
+    font-size: 0.8em;
+    font-weight: normal;
+}
+
+.sub--menu table td.select {
+    text-align: left;
+    border-bottom: 1px dashed #d0d0d0;
+}
+
+
 /* food 
--------------------------*/ 
- 
- 
+-------------------------*/
+
+
 /* drink 
--------------------------*/ 
- 
-.sub--drink .redBox h3 { 
- margin-top: 20px; 
-} 
- 
-.sub--drink .blueBox { 
- margin-top: 5em; 
-} 
- 
-.sub--drink .blueBox h3 { 
- margin-top: 40px; 
-} 
- 
- 
+-------------------------*/
+
+.sub--drink .redBox h3 {
+    margin-top: 20px;
+}
+
+.sub--drink .blueBox {
+    margin-top: 5em;
+}
+
+.sub--drink .blueBox h3 {
+    margin-top: 40px;
+}
+
+
 /* course 
--------------------------*/ 
- 
-.course01>ul:nth-of-type(1)>li { 
- width: 48%; 
-} 
- 
-.course01>ul:nth-of-type(1)>li:nth-of-type(2) { 
- text-align: center; 
-} 
- 
-.course01>ul:nth-of-type(1)>li>p { 
- margin-top: 1em; 
-} 
- 
-.course01 .redBox { 
- text-align: center; 
-} 
- 
-.courseTtl { 
- font-size: 1.5em; 
- font-weight: bold; 
- color: #850303; 
-} 
- 
-.course02>ul>li { 
- width: 48%; 
-} 
- 
-.course02>ul>li ul { 
- padding-left: 1.5em; 
-} 
- 
-.course02>ul>li ul li { 
- list-style: disc outside; 
-} 
- 
- 
+-------------------------*/
+
+.course01>ul:nth-of-type(1)>li {
+    width: 48%;
+}
+
+.course01>ul:nth-of-type(1)>li:nth-of-type(2) {
+    text-align: center;
+}
+
+.course01>ul:nth-of-type(1)>li>p {
+    margin-top: 1em;
+}
+
+.course01 .redBox {
+    text-align: center;
+}
+
+.courseTtl {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #850303;
+}
+
+.course02>ul>li {
+    width: 48%;
+}
+
+.course02>ul>li ul {
+    padding-left: 1.5em;
+}
+
+.course02>ul>li ul li {
+    list-style: disc outside;
+}
+
+
 /* access 
--------------------------*/ 
- 
- 
+-------------------------*/
+
+
 /* sub--list 
 blog / news 共通 
--------------------------*/ 
- 
-.sub--list dl { 
- padding: 1.5em; 
- /* border-bottom: 1px solid #eee; */ 
-} 
- 
-.sub--list dl dt { 
- width: 15%; 
-} 
- 
-.sub--list dl dd { 
- width: 85%; 
- text-decoration: underline; 
-} 
- 
- 
+-------------------------*/
+
+.sub--list dl {
+    padding: 1.5em;
+    /* border-bottom: 1px solid #eee; */
+}
+
+.sub--list dl dt {
+    width: 15%;
+}
+
+.sub--list dl dd {
+    width: 85%;
+    text-decoration: underline;
+}
+
+
 /* blog 
--------------------------*/ 
- 
-.sub--blog .wp-pagenavi a, 
-.sub--blog .wp-pagenavi span { 
- border: thin solid #618801; 
-} 
- 
-.sub--blog .wp-pagenavi a:hover, 
-.sub--blog .wp-pagenavi span.current { 
- background: #618801; 
-} 
- 
- 
+-------------------------*/
+
+.sub--blog .wp-pagenavi a,
+.sub--blog .wp-pagenavi span {
+    border: thin solid #618801;
+}
+
+.sub--blog .wp-pagenavi a:hover,
+.sub--blog .wp-pagenavi span.current {
+    background: #618801;
+}
+
+
 /* sub--detail 共通 
 blog_detail / news_detail 
--------------------------*/ 
- 
-.sub--detail .subTtlB { 
- margin-top: 0; 
-} 
- 
-.newsDate { 
- text-align: right; 
- margin-bottom: 3em; 
-} 
- 
-.newsTxt img { 
- margin-bottom: 1em; 
-} 
- 
-.newsTxt p { 
- margin-bottom: 1em; 
-} 
- 
-.page_nav { 
- display: flex; 
- align-items: center; 
- justify-content: center; 
- margin-top: 5em; 
-} 
- 
-.page_nav a { 
- color: #222; 
- padding: 8px 15px; 
- margin: 0 2px; 
- white-space: nowrap; 
- -webkit-transition: .2s ease-in-out; 
- transition: .2s ease-in-out; 
- text-align: center; 
- text-decoration: none; 
- border: thin solid #850303; 
- opacity: 1; 
-} 
- 
-.page_nav a:hover { 
- background: #850303; 
- color: #fff; 
-} 
- 
- 
+-------------------------*/
+
+.sub--detail .subTtlB {
+    margin-top: 0;
+}
+
+.newsDate {
+    text-align: right;
+    margin-bottom: 3em;
+}
+
+.newsTxt img {
+    margin-bottom: 1em;
+}
+
+.newsTxt p {
+    margin-bottom: 1em;
+}
+
+.page_nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5em;
+}
+
+.page_nav a {
+    color: #222;
+    padding: 8px 15px;
+    margin: 0 2px;
+    white-space: nowrap;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+    text-align: center;
+    text-decoration: none;
+    border: thin solid #850303;
+    opacity: 1;
+}
+
+.page_nav a:hover {
+    background: #850303;
+    color: #fff;
+}
+
+
 /* blog_detail 
--------------------------*/ 
- 
-.sub--blog_d .page_nav a { 
- border: thin solid #618801; 
-} 
- 
-.sub--blog_d .page_nav a:hover { 
- background: #618801; 
-} 
- 
- 
+-------------------------*/
+
+.sub--blog_d .page_nav a {
+    border: thin solid #618801;
+}
+
+.sub--blog_d .page_nav a:hover {
+    background: #618801;
+}
+
+
 /* news 
--------------------------*/ 
- 
- 
+-------------------------*/
+
+
 /* news_detail 
--------------------------*/ 
- 
- 
+-------------------------*/
+
+
 /* sitemap 
--------------------------*/ 
- 
-.sub--sitemap ul li { 
- width: 31%; 
- margin-bottom: 24px; 
- text-align: center; 
-} 
- 
-.sub--sitemap ul li:not(:nth-of-type(3n)) { 
- margin-right: 2%; 
-} 
- 
-.sub--sitemap ul li a { 
- color: #fff; 
- display: block; 
- transition: .4s; 
- font-weight: 300; 
- background: url(https://www.kazamidori28.com/images/common/arw.png) #618801; 
- border-radius: 5em; 
- position: relative; 
- letter-spacing: 0.1em; 
- text-align: center; 
- background-repeat: no-repeat; 
- line-height: 4em; 
- background-position: 90% 50%; 
-} 
- 
-.sub--sitemap ul li a:hover { 
- opacity: 0.8; 
- background-color: #3e3e3e9e; 
- background-position: 92% 50%; 
-} 
- 
- 
+-------------------------*/
+
+.sub--sitemap ul li {
+    width: 31%;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.sub--sitemap ul li:not(:nth-of-type(3n)) {
+    margin-right: 2%;
+}
+
+.sub--sitemap ul li a {
+    color: #fff;
+    display: block;
+    transition: .4s;
+    font-weight: 300;
+    background: url(https://www.kazamidori28.com/images/common/arw.png) #618801;
+    border-radius: 5em;
+    position: relative;
+    letter-spacing: 0.1em;
+    text-align: center;
+    background-repeat: no-repeat;
+    line-height: 4em;
+    background-position: 90% 50%;
+}
+
+.sub--sitemap ul li a:hover {
+    opacity: 0.8;
+    background-color: #3e3e3e9e;
+    background-position: 92% 50%;
+}
+
+
 /* privacy 
--------------------------*/ 
- 
-.sub--privacy .ulbox { 
- padding-top: 0.5em; 
- padding-left: 1.5em; 
-} 
- 
-.sub--privacy .ulbox li { 
- list-style: disc outside; 
-} 
- 
- 
+-------------------------*/
+
+.sub--privacy .ulbox {
+    padding-top: 0.5em;
+    padding-left: 1.5em;
+}
+
+.sub--privacy .ulbox li {
+    list-style: disc outside;
+}
+
+
 /* contact 
--------------------------*/ 
- 
-.contactBox01 p { 
- border: 1px solid #eee; 
- text-align: center; 
- padding: 30px 50px 30px; 
- font-size: 15px; 
- line-height: 180%; 
-} 
- 
-.contactBox01 p a.cc-tel { 
- display: inline-block; 
- position: relative; 
- margin: 0 0 0px; 
- padding: 5px 0 5px 1.2em; 
- background-image: url(https://www.kazamidori28.com/images/common/tel.png); 
- background-repeat: no-repeat; 
- background-position: left center; 
- background-size: 1em; 
- font-size: 2em; 
- line-height: 1.5; 
- font-weight: 500; 
- font-family: 'Oswald'; 
-} 
- 
-.contactBox01 p span { 
- font-size: 1.0rem; 
- color: #999; 
- display: block; 
- font-weight: normal; 
- margin-bottom: 0px; 
-} 
- 
-.contTable { 
- margin-top: 1em; 
-} 
- 
-.contTable th, 
-.contTable td { 
- padding: 24px 40px 24px 32px; 
-} 
- 
-.contTable th .red, 
-.contTable th .white { 
- font-size: 12px; 
- color: #fff; 
- font-style: normal; 
- text-align: center; 
- padding: 1px 5px; 
- display: block; 
- width: 50px; 
- float: right; 
-} 
- 
-.contTable th .red { 
- background: #d30000; 
-} 
- 
-.contTable th .white { 
- background: #666; 
-} 
- 
-.contTable input[type="radio"] { 
- width: auto; 
-} 
- 
-.contTable td.nameArea input { 
- width: 38%; 
-} 
- 
-.contTable td.telArea input { 
- width: 28%; 
-} 
- 
-.contTable textarea { 
- padding: 8px 10px; 
- background: #fff; 
- font-size: 13px; 
- border: 1px solid #e0e0e0; 
- width: 100%; 
- box-sizing: border-box; 
- color: #000; 
-} 
- 
-.contTable input, 
-select { 
- padding: 8px 10px; 
- background: #fff; 
- font-size: 13px; 
- border: 1px solid #e0e0e0; 
- box-sizing: border-box; 
- width: 100%; 
- color: #000; 
-} 
- 
-.postal, 
-.pref_name { 
- display: block; 
- width: 30%; 
-} 
- 
-.addRow div:not(:first-child) { 
- padding-top: 1em; 
-} 
- 
- 
-/* プラポエリア */ 
- 
-.privacyBox { 
- padding: 8px 10px; 
- height: 220px; 
- overflow-y: scroll; 
- margin-bottom: 20px; 
- background: #fff; 
- font-size: 90%; 
- border: 1px solid #e0e0e0; 
-} 
- 
-.privacyBox h4 { 
- padding-top: 1em; 
-} 
- 
-input[type="checkbox"] { 
- width: auto; 
- margin: 3px 3px 3px 4px; 
-} 
- 
- 
-/* ボタンエリア */ 
- 
-.sub--contact .btn_area { 
- margin-top: 45px; 
- text-align: center; 
-} 
- 
-.sub--contact .btn_area input[type="submit"], 
-.sub--contact .btn_area input[type="reset"], 
-.sub--contact .btn_area button { 
- margin: 0.5em 1em; 
- font-size: 1.3em; 
- cursor: pointer; 
- width: 250px; 
- height: 60px; 
- border: 2px solid #618801; 
- text-align: center; 
- transition: 0.3s; 
-} 
- 
-.sub--contact .btn_area input[type="reset"], 
-.sub--contact .btn_area button { 
- background: #fff; 
- color: #618801; 
-} 
- 
-.sub--contact .btn_area input[type="submit"] { 
- background: #618801; 
- color: #fff; 
-} 
- 
-.sub--contact .btn_area input:hover[type="reset"], 
-.sub--contact .btn_area button:hover { 
- background: #618801; 
- color: #fff; 
-} 
- 
-.sub--contact .btn_area input:hover[type="submit"] { 
- background: #fff; 
- color: #618801; 
-} 
- 
-.errBox { 
- margin-top: 50px; 
- color: red; 
- border: 2px solid; 
- padding: 2em; 
- text-align: center; 
-} 
- 
-.waitTxt { 
- text-align: center; 
-} 
- 
-.contTable02 { 
- margin-top: 32px; 
-} 
- 
-.Table01 tr.noborder { 
- border: none; 
-} 
- 
-.Table01 tr.noborder td { 
- padding-top: 0; 
-} 
- 
-td.cen { 
- text-align: center; 
-} 
- 
-.contactbtn { 
- margin: 0.5em 1em; 
- font-size: 1.3em; 
- cursor: pointer; 
- width: 250px; 
- height: 60px; 
- border: 2px solid #618801; 
- text-align: center; 
- transition: 0.3s; 
-} 
- 
-.contactbtn02 { 
- background: #fff; 
- color: #618801; 
-} 
- 
-.contactbtn02:hover { 
- background: #618801; 
- color: #fff; 
-} 
- 
-.contactbtn01 { 
- background: #618801; 
- color: #fff; 
-} 
- 
-.contactbtn01:hover { 
- background: #fff; 
- color: #618801; 
-} 
- 
-.Table01.contTable02 tr.noborder td { 
- border: none; 
-} 
- 
-.Table01.contTable02 tr.last th { 
- border-bottom: dashed 1px #618801; 
-} 
- 
-.Table01.contTable02 tr.last td { 
- border-bottom: dashed 1px #d0d0d0; 
-} 
- 
-ul.pagenation { 
- margin: 56px auto 0; 
- text-align: center; 
- letter-spacing: 0; 
- width: auto; 
- min-width: 0; 
- border: none; 
- padding: 0; 
- background: none; 
-} 
- 
-ul.pagenation li { 
- width: 36px; 
- height: 36px; 
- display: inline-block; 
- margin: 3px; 
- line-height: 34px; 
- border-bottom: none; 
- padding: 0px; 
- background: none; 
-} 
- 
-ul.pagenation li.current span { 
- width: 36px; 
- height: 36px; 
- display: block; 
- color: #fff; 
- background: #850303; 
- border: #850303 solid 1px; 
- text-decoration: none; 
- float: none; 
-} 
- 
-ul.pagenation li a { 
- width: 36px; 
- height: 36px; 
- display: block; 
- color: #222; 
- background: none; 
- background: #fff; 
- border: #850303 solid 1px; 
- text-decoration: none; 
- float: none; 
-} 
- 
-ul.pagenation li a:hover { 
- background: #850303; 
- color: #fff; 
- text-decoration: none; 
- opacity: 1; 
-} 
- 
- 
+-------------------------*/
+
+.contactBox01 p {
+    border: 1px solid #eee;
+    text-align: center;
+    padding: 30px 50px 30px;
+    font-size: 15px;
+    line-height: 180%;
+}
+
+.contactBox01 p a.cc-tel {
+    display: inline-block;
+    position: relative;
+    margin: 0 0 0px;
+    padding: 5px 0 5px 1.2em;
+    background-image: url(https://www.kazamidori28.com/images/common/tel.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 1em;
+    font-size: 2em;
+    line-height: 1.5;
+    font-weight: 500;
+    font-family: 'Oswald';
+}
+
+.contactBox01 p span {
+    font-size: 1.0rem;
+    color: #999;
+    display: block;
+    font-weight: normal;
+    margin-bottom: 0px;
+}
+
+.contTable {
+    margin-top: 1em;
+}
+
+.contTable th,
+.contTable td {
+    padding: 24px 40px 24px 32px;
+}
+
+.contTable th .red,
+.contTable th .white {
+    font-size: 12px;
+    color: #fff;
+    font-style: normal;
+    text-align: center;
+    padding: 1px 5px;
+    display: block;
+    width: 50px;
+    float: right;
+}
+
+.contTable th .red {
+    background: #d30000;
+}
+
+.contTable th .white {
+    background: #666;
+}
+
+.contTable input[type="radio"] {
+    width: auto;
+}
+
+.contTable td.nameArea input {
+    width: 38%;
+}
+
+.contTable td.telArea input {
+    width: 28%;
+}
+
+.contTable textarea {
+    padding: 8px 10px;
+    background: #fff;
+    font-size: 13px;
+    border: 1px solid #e0e0e0;
+    width: 100%;
+    box-sizing: border-box;
+    color: #000;
+}
+
+.contTable input,
+select {
+    padding: 8px 10px;
+    background: #fff;
+    font-size: 13px;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    width: 100%;
+    color: #000;
+}
+
+.postal,
+.pref_name {
+    display: block;
+    width: 30%;
+}
+
+.addRow div:not(:first-child) {
+    padding-top: 1em;
+}
+
+
+/* プラポエリア */
+
+.privacyBox {
+    padding: 8px 10px;
+    height: 220px;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+    background: #fff;
+    font-size: 90%;
+    border: 1px solid #e0e0e0;
+}
+
+.privacyBox h4 {
+    padding-top: 1em;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin: 3px 3px 3px 4px;
+}
+
+
+/* ボタンエリア */
+
+.sub--contact .btn_area {
+    margin-top: 45px;
+    text-align: center;
+}
+
+.sub--contact .btn_area input[type="submit"],
+.sub--contact .btn_area input[type="reset"],
+.sub--contact .btn_area button {
+    margin: 0.5em 1em;
+    font-size: 1.2em;
+    cursor: pointer;
+    width: 250px;
+    height: 60px;
+    border: 2px solid var(--primary-green);
+    text-align: center;
+    transition: var(--transition-base);
+    border-radius: 4px;
+}
+
+.sub--contact .btn_area input[type="reset"],
+.sub--contact .btn_area button {
+    background: var(--bg-white);
+    color: var(--primary-green);
+}
+
+.sub--contact .btn_area input[type="submit"] {
+    background: var(--primary-green);
+    color: var(--text-white);
+}
+
+.sub--contact .btn_area input:hover[type="reset"],
+.sub--contact .btn_area button:hover {
+    background: var(--primary-green);
+    color: var(--text-white);
+}
+
+.sub--contact .btn_area input:hover[type="submit"] {
+    background: var(--bg-white);
+    color: var(--primary-green);
+}
+
+.errBox {
+    margin-top: 50px;
+    color: red;
+    border: 2px solid;
+    padding: 2em;
+    text-align: center;
+}
+
+.waitTxt {
+    text-align: center;
+}
+
+.contTable02 {
+    margin-top: 32px;
+}
+
+.Table01 tr.noborder {
+    border: none;
+}
+
+.Table01 tr.noborder td {
+    padding-top: 0;
+}
+
+td.cen {
+    text-align: center;
+}
+
+.contactbtn {
+    margin: 0.5em 1em;
+    font-size: 1.3em;
+    cursor: pointer;
+    width: 250px;
+    height: 60px;
+    border: 2px solid #618801;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.contactbtn02 {
+    background: #fff;
+    color: #618801;
+}
+
+.contactbtn02:hover {
+    background: #618801;
+    color: #fff;
+}
+
+.contactbtn01 {
+    background: #618801;
+    color: #fff;
+}
+
+.contactbtn01:hover {
+    background: #fff;
+    color: #618801;
+}
+
+.Table01.contTable02 tr.noborder td {
+    border: none;
+}
+
+.Table01.contTable02 tr.last th {
+    border-bottom: dashed 1px #618801;
+}
+
+.Table01.contTable02 tr.last td {
+    border-bottom: dashed 1px #d0d0d0;
+}
+
+ul.pagenation {
+    margin: 56px auto 0;
+    text-align: center;
+    letter-spacing: 0;
+    width: auto;
+    min-width: 0;
+    border: none;
+    padding: 0;
+    background: none;
+}
+
+ul.pagenation li {
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    margin: 3px;
+    line-height: 34px;
+    border-bottom: none;
+    padding: 0px;
+    background: none;
+}
+
+ul.pagenation li.current span {
+    width: 36px;
+    height: 36px;
+    display: block;
+    color: var(--text-white);
+    background: var(--primary-red);
+    border: var(--primary-red) solid 1px;
+    text-decoration: none;
+}
+
+ul.pagenation li a {
+    width: 36px;
+    height: 36px;
+    display: block;
+    color: var(--text-dark);
+    background: var(--bg-white);
+    border: var(--primary-red) solid 1px;
+    text-decoration: none;
+}
+
+ul.pagenation li a:hover {
+    background: var(--primary-red);
+    color: var(--text-white);
+    text-decoration: none;
+    opacity: 1;
+}
+
+
 /* color_sample 
 text black 222 
 ttl black 383838 

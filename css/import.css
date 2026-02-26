@@ -7,6 +7,7 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
+@import "variables.css";
 @import "layout.css";
 @import "fullscreen.overlay.effects.css";
 @import "jquery.bxslider.css";
