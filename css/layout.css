@@ -3,9 +3,29 @@
 /* layout */
 
 
-/*================================= 
-Initialization of style 
+/*=================================
+Initialization of style
 ===================================*/
+
+:root {
+    /* Color system inspired by MOSSA */
+    --bg-white: #ffffff;
+    --bg-soft: #faf7f2;
+    --bg-accent: #f3ebe2;
+    --text-dark: #2d2926;
+    --text-muted: #7a746d;
+    --primary-gold: #c59a55;
+    --primary-red: #c85b4a;
+    --border-soft: rgba(0, 0, 0, 0.06);
+    --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.08);
+    --radius-card: 22px;
+    --radius-pill: 999px;
+
+    /* Typography & motion */
+    --font-sans: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+    --font-serif: "Noto Serif JP", "Yu Mincho", serif;
+    --transition-base: all 0.25s ease;
+}
 
 body {
     margin: 0;
@@ -13,12 +33,15 @@ body {
     color: var(--text-dark);
     font-family: var(--font-sans);
     font-size: 16px;
-    line-height: 1.6;
-    text-align: center;
+    line-height: 1.7;
+    text-align: left;
     width: 100%;
-    min-width: 1022px;
+    min-width: 0;
     font-weight: 400;
-    background-color: var(--bg-white);
+    background:
+      radial-gradient(circle at top left, #fbe9dd 0, transparent 55%),
+      radial-gradient(circle at bottom right, #f3efe7 0, transparent 55%),
+      var(--bg-white);
 }
 
 a {
@@ -150,11 +173,15 @@ Layout-Base
 }
 
 header {
-    position: relative;
+    position: sticky;
     top: 0;
     width: 100%;
     padding: 0;
     margin: 0 auto;
+    z-index: 40;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    backdrop-filter: blur(14px);
 }
 
 #header {
@@ -170,48 +197,59 @@ header {
 }
 
 #header a:hover {
-    color: #9a9a9a;
-    transition: .4s;
+    color: var(--primary-red);
+    transition: .25s ease;
 }
 
 .header_inner {
     width: 100%;
+    max-width: 1180px;
     position: relative;
-    padding: 0 0 2em;
+    padding: 1.1rem 5%;
     margin: 0 auto;
-    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.4rem;
 }
 
 .siteTitle {
-    max-height: 114px;
-    width: 20%;
+    flex: 0 0 auto;
     text-align: left;
-    vertical-align: middle;
 }
 
 .siteTitle a {
     display: inline-block;
-    min-width: 200px;
-    max-width: 322px;
-    width: 100%;
+    font-family: var(--font-serif);
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    font-size: 1.15rem;
+    color: var(--text-dark);
 }
 
-.siteTitle img {
-    width: 100%;
-    height: auto;
+.header-nav {
+    flex: 1 1 auto;
 }
 
-.siteTitle span {
-    display: block;
-    font-size: 0.8em;
+.header-nav .flex--around--cen {
+    justify-content: center;
+    gap: 2.2rem;
+}
+
+.header-nav a {
+    font-size: 0.9rem;
+    letter-spacing: 0.14em;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.header-nav li.on a {
+    color: var(--primary-red);
 }
 
 .h_info {
-    margin-left: auto;
-    margin-right: 0;
-    padding: 0;
-    background: var(--bg-white);
-    vertical-align: bottom;
+    display: none;
 }
 
 .hd_inner_tel {
