@@ -1,383 +1,188 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-
-<head>
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-NNV4N24');</script>
-    <!-- End Google Tag Manager -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-    <title>お食事メニュー｜横浜市新杉田駅の創作料理居酒屋は風緑28番地へ！当店自慢のおでんや鶏出汁をご堪能あれ！</title>
-    <meta name="keywords" content="お食事メニュー,新杉田駅,横浜,創作料理,居酒屋,おでん,鶏出汁">
-    <meta name="description" content="横浜市新杉田駅の創作料理居酒屋、風緑28番地のお食事メニューです。">
-    <link href="css/import.css" rel="stylesheet" type="text/css" media="all">
-    <link rel="stylesheet" type="text/css" media="print" href="css/print.css">
-    <link rel="shortcut icon" href="images/common/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" href="images/common/apple-touch-icon.png">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-
-<body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NNV4N24" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <header id="pagetop">
-        <div class="navToggle" id="trigger-overlay">
-            <div>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <!-- ▽header -->
-        <div id="header">
-            <h1>お食事メニュー｜横浜市新杉田駅の創作料理居酒屋は風緑28番地へ！当店自慢のおでんや鶏出汁をご堪能あれ！</h1>
-            <div class="header_inner flex">
-                <div class="siteTitle">
-                    <a href="/"><img src="images/common/logo.png" alt="風緑28番地カザミドリ" width="301" height="105"></a>
-                </div>
-                <div class="h_info">
-                    <div class="h_telbox flex">
-                        <div class="h_tel sn tn">
-                            <p class="bg_gr">お電話でのご予約・お問い合わせ</p><span class="tel_txt">tel.</span><span
-                                class="tel_link"><a href="tel:045-342-5331">045-342-5331</a></span>
-                            <p>営業時間：15:00～24:00(LO.23:00)</p>
-                        </div>
-                        <div class="h_contact sn tn"><a href="./contact.php">お問い合わせ</a></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ▽sub_visual -->
-            <div id="sub_visual">
-                <h2 class="subTtlA"><span>menu list</span>お食事メニュー</h2>
-            </div>
-            <!-- ▲sub_visual -->
-
-            <!-- ▽global-navigation -->
-            <div class="overlay overlay-scale pc-nav">
-                <nav class="global-navigation">
-                    <ul class="flex--around--cen">
-                        <li><a href="/">ホーム</a></li>
-                        <li><a href="./about.html">当店のこだわり</a></li>
-                        <li class="on"><a href="./food.html">お食事メニュー</a></li>
-                        <li><a href="./drink.html">お飲み物メニュー</a></li>
-                        <li><a href="./course.html">コース・貸し切り予約</a></li>
-                        <li><a href="./access.html">店舗概要・アクセス</a></li>
-                        <li class="h_tel pn"><span class="tel_link"><a href="tel:045-342-5331">045-342-5331</a></span>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <!-- ▲global-navigation -->
-        </div>
-        <!-- ▲header -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>お食事メニュー | 風緑28番地</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html#top">風緑<span>28</span>番地</a>
+        <nav id="global-nav" class="nav" aria-label="グローバルナビゲーション">
+          <a href="index.html#top">ホーム</a>
+          <a href="about.html">当店のこだわり</a>
+          <a href="food.html">フード</a>
+          <a href="drink.html">ドリンク</a>
+          <a href="course.html">コース</a>
+          <a href="access.html">アクセス</a>
+        </nav>
+        <a class="header-phone" href="tel:0453425331">045-342-5331</a>
+        <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開く">☰</button>
+      </div>
     </header>
 
-    <!-- ▽subpage -->
-    <div class="subpage">
-        <div class="bread_crumb_list">
-            <ul class="bread_crumb">
-                <li class="level-1 top"><a href="/">ホーム</a></li>
-                <li class="level-2 sub current">お食事メニュー</li>
-            </ul>
-        </div>
-        <!-- ▽subcontents -->
-        <div class="subcontents">
-            <!-- ▽subWrap -->
-            <div class="subWrap sub--food sub--menu">
+    <section class="subpage-hero">
+      <div class="container">
+        <p class="eyebrow">MENU LIST</p>
+        <h1>お食事メニュー</h1>
+        <p>オリジナルメニュー・定番メニュー・おすすめメニューをご紹介します。</p>
+      </div>
+    </section>
 
-                <h3 class="subTtlB">当店の一押し！</h3>
-                <ul class="flex subBox01">
-                    <li class="txtArea">
-                        <p>国産鶏ガラ・もみじ・香味野菜・昆布を4～5時間煮込んだこだわりのお出汁に、九州の岩塩で味付けしたコクのある味わい。<br>シンプルなテイストは和テイストにも洋テイストにもアレンジ可能。<br>当店オリジナルの創作おでんです。
-                        </p>
-                    </li>
-                    <li><img src="images/food/img01.jpg" alt=""></li>
-                </ul>
-
-                <h3 class="subTtlB">オリジナルメニュー</h3>
-                <div class="redBox">
-                    <ul class="flex menuBox">
-                        <li>
-                            <table class="Table02">
-                                <tr>
-                                    <th colspan="2" class="menuTtl">単品鶏出汁おでん</th>
-                                </tr>
-                                <tr>
-                                    <th>大根</th>
-                                    <td>198円</td>
-                                </tr>
-                                <tr>
-                                    <th>ちくわ</th>
-                                    <td>110円</td>
-                                </tr>
-                                <tr>
-                                    <th>ちくわぶ</th>
-                                    <td>110円</td>
-                                </tr>
-                                <tr>
-                                    <th>こんにゃく</th>
-                                    <td>110円</td>
-                                </tr>
-                                <tr>
-                                    <th>絹ごし厚揚げ</th>
-                                    <td>165円</td>
-                                </tr>
-                            </table>
-                        </li>
-                        <li>
-                            <table class="Table02">
-                                <tr>
-                                    <th>くるまふ</th>
-                                    <td>198円</td>
-                                </tr>
-                                <tr>
-                                    <th>たまご</th>
-                                    <td>143円</td>
-                                </tr>
-                                <tr>
-                                    <th>ごぼうてん</th>
-                                    <td>132円</td>
-                                </tr>
-                                <tr>
-                                    <th>じゃがいも</th>
-                                    <td>132円</td>
-                                </tr>
-                                <tr>
-                                    <th>がんも</th>
-                                    <td>143円</td>
-                                </tr>
-                                <tr>
-                                    <th>はんぺん</th>
-                                    <td>132円</td>
-                                </tr>
-                            </table>
-                        </li>
-                    </ul>
-                </div>
-
-                <h3 class="subTtlB">定番メニュー</h3>
-                <div class="blueBox">
-                    <p class="recommendTxt"><span class="recommend">おすすめメニュー</span></p>
-                    <ul class="flex menuBox">
-                        <li>
-                            <table class="Table02">
-                                <tr>
-                                    <th><span class="recommend">特製もつ煮</span></th>
-                                    <td>440円</td>
-                                </tr>
-                                <tr>
-                                    <th colspan="2"><span class="recommend">冬期限定スペイン産生ハム（ハモンセラーノ）</span><br><span
-                                            class="small">11月～3月ぐらいまで販売</span></th>
-                                </tr>
-                                <tr>
-                                    <th><span class="recommend">組み合わせ自由 選べるおつまみ</span><br>※下記からお選びいただけます。</th>
-                                    <td>単品：385円<br>3品：979円<br>4品：1,309円</td>
-                                </tr>
-                                <tr class="sn">
-                                    <td colspan="2" class="select">枝豆のペペロンチーノ </td>
-                                </tr>
-                                <tr class="sn">
-                                    <td colspan="2" class="select">ポテトサラダ </td>
-                                </tr>
-                                <tr class="sn">
-                                    <td colspan="2" class="select">鶏キムチなっとう </td>
-                                </tr>
-                                <tr class="sn">
-                                    <td colspan="2" class="select">魚粉フライドポテト </td>
-                                </tr>
-                                <tr class="sn">
-                                    <td colspan="2" class="select">鶏皮ポンズ </td>
-                                </tr>
-                                <tr class="sn">
-                                    <td colspan="2" class="select">しらす冷奴 </td>
-                                </tr>
-                                <tr class="sn">
-                                    <td colspan="2" class="select">アンチョビポテト </td>
-                                </tr>
-                                <tr class="sn">
-                                    <td colspan="2" class="select">クリームチーズの味噌漬け </td>
-                                </tr>
-                                <tr class="sn">
-                                    <td colspan="2" class="select">塩昆布キャベツ </td>
-                                </tr>
-                                <tr class="sn">
-                                    <td colspan="2" class="select">野菜スティック </td>
-                                </tr>
-                                <tr class="sn">
-                                    <td colspan="2" class="select">ミニピラフ </td>
-                                </tr>
-                                <tr class="sn">
-                                    <td colspan="2" class="select">メンチカツ </td>
-                                </tr>
-                                <tr class="sn">
-                                    <td colspan="2" class="select">アジフライ </td>
-                                </tr>
-                                <tr class="pn tn">
-                                    <td colspan="2" class="select">
-                                        枝豆のペペロンチーノ・ポテトサラダ・鶏キムチなっとう・魚粉フライドポテト・鶏皮ポンズ・しらす冷奴・アンチョビポテト・クリームチーズの味噌漬け・塩昆布キャベツ・野菜スティック・ミニピラフ・メンチカツ・アジフライ
-                                    </td>
-                                </tr>
-                            </table>
-                        </li>
-                        <li>
-                            <table class="Table02">
-                                <tr>
-                                    <th>本日の刺身</th>
-                                    <td>605円～</td>
-                                </tr>
-                                <tr>
-                                    <th>本日のカルパッチョ</th>
-                                    <td>660円～</td>
-                                </tr>
-                                <tr>
-                                    <th>枝豆</th>
-                                    <td>330円</td>
-                                </tr>
-                                <tr>
-                                    <th>長いもときゅうりの梅肉和え</th>
-                                    <td>385円</td>
-                                </tr>
-                                <tr>
-                                    <th>エイヒレ炙り</th>
-                                    <td>495円</td>
-                                </tr>
-                                <tr>
-                                    <th>鶏モモの唐揚げ</th>
-                                    <td>440円</td>
-                                </tr>
-                                <tr>
-                                    <th>ヤゲン軟骨塩だれ焼き</th>
-                                    <td>440円</td>
-                                </tr>
-                                <tr>
-                                    <th>豚軟骨煮込み</th>
-                                    <td>495円</td>
-                                </tr>
-                                <tr>
-                                    <th>チキン南蛮</th>
-                                    <td>550円</td>
-                                </tr>
-                                <tr>
-                                    <th>まぐろ血合いステーキ</th>
-                                    <td>550円</td>
-                                </tr>
-                                <tr>
-                                    <th>本日のアヒージョ</th>
-                                    <td>660円</td>
-                                </tr>
-                                <tr>
-                                    <th>きまぐれ焼飯</th>
-                                    <td>660円</td>
-                                </tr>
-                                <tr>
-                                    <th>牛すじカレー</th>
-                                    <td>715円</td>
-                                </tr>
-                                <tr>
-                                    <th>ナポリタン</th>
-                                    <td>715円</td>
-                                </tr>
-                                <tr>
-                                    <th>昔ながらのオムライス</th>
-                                    <td>715円</td>
-                                </tr>
-                                <tr>
-                                    <th>鶏スープうどん</th>
-                                    <td>440円</td>
-                                </tr>
-                                <tr>
-                                    <th>鶏出汁ラーメン</th>
-                                    <td>660円</td>
-                                </tr>
-                                <tr>
-                                    <th>アンチョビピザ</th>
-                                    <td>660円</td>
-                                </tr>
-                                <tr>
-                                    <th>おまかせスパゲッティ</th>
-                                    <td>770～990円</td>
-                                </tr>
-                                <tr>
-                                    <th>１６穀米のチーズリゾット</th>
-                                    <td>990円</td>
-                                </tr>
-                                <tr>
-                                    <th>麦飯</th>
-                                    <td>220円</td>
-                                </tr>
-                                <tr>
-                                    <th>バケット</th>
-                                    <td>220円</td>
-                                </tr>
-                            </table>
-                        </li>
-                    </ul>
-                </div>
-
-                <ul class="flex subBox02">
-                    <li><img src="images/food/img02.jpg" alt=""></li>
-                    <li><img src="images/food/img03.jpg" alt=""></li>
-                    <li><img src="images/food/img04.jpg" alt=""></li>
-                </ul>
-
-            </div>
-            <!-- ▲subWrap -->
-        </div>
-        <!-- ▲subcontents -->
-        <div class="sub_contact">
+    <main class="subpage-main menu-page-bg">
+      <div class="container food-menu-page">
+        <section class="menu-section-block">
+          <h2 class="menu-section-title"><span>オ</span>リジナルメニュー</h2>
+          <div class="menu-separator red"><i></i></div>
+          <div class="menu-sheet-two-col">
             <div>
-                <h3>ご予約・お問い合わせ</h3>
-                <ul class="flex--around">
-                    <li class="contact_mail">
-                        <p>メールでのお問い合わせ</p>
-                        <a class="radius_btn" href="https://www.hotpepper.jp/strJ002648234/" target="_blank"
-                            rel="noopener noreferrer">contact</a>
-                    </li>
-                    <li class="contact_tel">
-                        <p>電話でのお問い合わせ</p>
-                        <p class="ff01">tel.<a href="tel:045-342-5331">045-342-5331</a></p>
-                    </li>
-                </ul>
+              <h3 class="menu-subhead">単品鶏出汁おでん</h3>
+              <dl class="menu-price-list">
+                <div><dt>大根</dt><dd>198円</dd></div>
+                <div><dt>ちくわ</dt><dd>110円</dd></div>
+                <div><dt>ちくわぶ</dt><dd>110円</dd></div>
+                <div><dt>こんにゃく</dt><dd>110円</dd></div>
+                <div><dt>絹ごし厚揚げ</dt><dd>165円</dd></div>
+              </dl>
             </div>
-        </div>
-    </div>
-    <!-- ▲subpage -->
+            <div>
+              <h3 class="menu-subhead menu-subhead-spacer">単品鶏出汁おでん</h3>
+              <dl class="menu-price-list">
+                <div><dt>くるまふ</dt><dd>198円</dd></div>
+                <div><dt>たまご</dt><dd>143円</dd></div>
+                <div><dt>ごぼうてん</dt><dd>132円</dd></div>
+                <div><dt>じゃがいも</dt><dd>132円</dd></div>
+                <div><dt>がんも</dt><dd>143円</dd></div>
+                <div><dt>はんぺん</dt><dd>132円</dd></div>
+              </dl>
+            </div>
+          </div>
+        </section>
 
-    <footer>
-        <div id="footer">
-            <div class="footer_inner">
-                <div class="ft_nav">
-                                        <ul class="flex--around--cen">
-                        <li><a href="./access.html">店舗概要・アクセス</a></li>
-                        <li><a href="./contact.php">お問い合わせ</a></li>
-                                                <li><a href="./privacy.html">プライバシーポリシー</a></li>
-                    </ul>
+        <section class="menu-section-block">
+          <h2 class="menu-section-title"><span>定</span>番メニュー</h2>
+          <div class="menu-separator blue"><i></i></div>
+          <h3 class="menu-subhead center">● おすすめメニュー</h3>
+          <div class="menu-sheet-two-col food-recommend">
+            <div class="food-recommend-left">
+              <dl class="menu-price-list">
+                <div><dt class="with-dot">特製もつ煮</dt><dd>440円</dd></div>
+                <div><dt class="with-dot">冬期限定スペイン産生ハム（ハモンセラーノ）</dt><dd></dd></div>
+              </dl>
+              <p class="menu-note">11月〜3月ぐらいまで販売</p>
+
+              <div class="select-otsumami">
+                <div class="select-head">
+                  <p class="with-dot">組み合わせ自由 選べるおつまみ</p>
+                  <ul>
+                    <li>単品：385円</li>
+                    <li>3品：979円</li>
+                    <li>4品：1,309円</li>
+                  </ul>
                 </div>
+                <p>※下記からお選びいただけます。</p>
+                <ul class="otsumami-list">
+                  <li>枝豆のペペロンチーノ</li>
+                  <li>ポテトサラダ</li>
+                  <li>鶏キムチなっとう</li>
+                  <li>魚粉フライドポテト</li>
+                  <li>鶏皮ポンズ</li>
+                  <li>しらす冷奴</li>
+                  <li>アンチョビポテト</li>
+                  <li>クリームチーズの味噌漬け</li>
+                  <li>塩昆布キャベツ</li>
+                  <li>野菜スティック</li>
+                  <li>ミニピラフ</li>
+                  <li>メンチカツ</li>
+                  <li>アジフライ</li>
+                </ul>
+              </div>
             </div>
-            <div class="copyright">
-                <address>Copyright &copy; <a href="/"> 横浜市新杉田駅の創作料理居酒屋は風緑28番地へ！当店自慢のおでんや鶏出汁をご堪能あれ！ </a> All Rights
-                    Reserved.</address>
+
+            <div class="food-recommend-right">
+              <dl class="menu-price-list">
+                <div><dt>本日の刺身</dt><dd>605円〜</dd></div>
+                <div><dt>本日のカルパッチョ</dt><dd>660円〜</dd></div>
+                <div><dt>枝豆</dt><dd>330円</dd></div>
+                <div><dt>長いもときゅうりの梅肉和え</dt><dd>385円</dd></div>
+                <div><dt>エイヒレ炙り</dt><dd>495円</dd></div>
+                <div><dt>鶏モモの唐揚げ</dt><dd>440円</dd></div>
+                <div><dt>ヤゲン軟骨塩だれ焼き</dt><dd>440円</dd></div>
+                <div><dt>豚軟骨煮込み</dt><dd>495円</dd></div>
+                <div><dt>チキン南蛮</dt><dd>550円</dd></div>
+                <div><dt>まぐろ血合いステーキ</dt><dd>550円</dd></div>
+                <div><dt>本日のアヒージョ</dt><dd>660円</dd></div>
+                <div><dt>きまぐれ焼飯</dt><dd>660円</dd></div>
+                <div><dt>牛すじカレー</dt><dd>715円</dd></div>
+                <div><dt>ナポリタン</dt><dd>715円</dd></div>
+                <div><dt>昔ながらのオムライス</dt><dd>715円</dd></div>
+                <div><dt>鶏スープうどん</dt><dd>440円</dd></div>
+                <div><dt>鶏出汁ラーメン</dt><dd>660円</dd></div>
+                <div><dt>アンチョビピザ</dt><dd>660円</dd></div>
+                <div><dt>おまかせスパゲッティ</dt><dd>770〜990円</dd></div>
+                <div><dt>１６穀米のチーズリゾット</dt><dd>990円</dd></div>
+                <div><dt>麦飯</dt><dd>220円</dd></div>
+                <div><dt>バケット</dt><dd>220円</dd></div>
+              </dl>
             </div>
+          </div>
+        </section>
+
+        <section class="food-gallery">
+          <img src="img/food.jpg" alt="料理写真1" />
+          <img src="img/food2.jpg" alt="料理写真2" />
+          <img src="img/food3.jpg" alt="料理写真3" />
+        </section>
+
+        <p><a class="btn btn-primary" href="index.html#menu">トップへ戻る</a></p>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-top">
+          <h2 class="footer-brand">KAZAMIDORI 28</h2>
+          <div class="footer-grid">
+            <section>
+              <h3>MENU</h3>
+              <a href="food.html">お食事メニュー</a>
+              <a href="drink.html">お飲み物メニュー</a>
+              <a href="course.html">コース・貸し切り予約</a>
+            </section>
+            <section>
+              <h3>SHOP</h3>
+              <a href="about.html">当店のこだわり</a>
+              <a href="access.html">店舗情報・アクセス</a>
+              <a href="https://www.hotpepper.jp/strJ002648234/" target="_blank" rel="noopener noreferrer">予約（Hot Pepper）</a>
+            </section>
+            <section>
+              <h3>SOCIAL</h3>
+              <a href="https://www.instagram.com/kazamidoli28/?hl=ja" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </section>
+            <aside class="footer-side">
+              <p class="wordmark">kazamidori28</p>
+              <p class="wordmark-sub">shinsugita izakaya</p>
+            </aside>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <div class="footer-mini-links">
+            <a href="about.html">ABOUT US</a>
+            <a href="mailto:kei.ma0009@gmail.com">CONTACT</a>
+            <a href="https://www.instagram.com/kazamidoli28/?hl=ja" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+          </div>
+          <p>Copyright © 風緑28番地 All Rights Reserved.</p>
+        </div>
+      </div>
     </footer>
-
-    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="js/fullscreen.overlay.effects/modernizr.custom.js"></script>
-    <script src="js/fullscreen.overlay.effects/classie.js"></script>
-    <script src="js/fullscreen.overlay.effects/motion1.js"></script>
-    <script src="js/common.js"></script>
-    <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
