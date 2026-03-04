@@ -39,108 +39,190 @@
 
     <main class="subpage-main menu-page-bg">
       <div class="container food-menu-page">
-        <section class="menu-section-block">
-          <h2 class="menu-section-title"><span>オ</span>リジナルメニュー</h2>
-          <div class="menu-separator red"><i></i></div>
-          <div class="menu-sheet-two-col">
-            <div>
-              <h3 class="menu-subhead">単品鶏出汁おでん</h3>
-              <dl class="menu-price-list">
-                <div><dt>大根</dt><dd>198円</dd></div>
-                <div><dt>ちくわ</dt><dd>110円</dd></div>
-                <div><dt>ちくわぶ</dt><dd>110円</dd></div>
-                <div><dt>こんにゃく</dt><dd>110円</dd></div>
-                <div><dt>絹ごし厚揚げ</dt><dd>165円</dd></div>
-              </dl>
-            </div>
-            <div>
-              <h3 class="menu-subhead menu-subhead-spacer">単品鶏出汁おでん</h3>
-              <dl class="menu-price-list">
-                <div><dt>くるまふ</dt><dd>198円</dd></div>
-                <div><dt>たまご</dt><dd>143円</dd></div>
-                <div><dt>ごぼうてん</dt><dd>132円</dd></div>
-                <div><dt>じゃがいも</dt><dd>132円</dd></div>
-                <div><dt>がんも</dt><dd>143円</dd></div>
-                <div><dt>はんぺん</dt><dd>132円</dd></div>
-              </dl>
-            </div>
-          </div>
-        </section>
+        <div class="tabs" role="tablist" aria-label="メニュータブ">
+          <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="food-panel-page" id="food-tab-page" data-target="food-panel-page">フード</button>
+          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="drink-panel-page" id="drink-tab-page" data-target="drink-panel-page">ドリンク</button>
+        </div>
 
-        <section class="menu-section-block">
-          <h2 class="menu-section-title"><span>定</span>番メニュー</h2>
-          <div class="menu-separator blue"><i></i></div>
-          <h3 class="menu-subhead center">● おすすめメニュー</h3>
-          <div class="menu-sheet-two-col food-recommend">
-            <div class="food-recommend-left">
-              <dl class="menu-price-list">
-                <div><dt class="with-dot">特製もつ煮</dt><dd>440円</dd></div>
-                <div><dt class="with-dot">冬期限定スペイン産生ハム（ハモンセラーノ）</dt><dd></dd></div>
-              </dl>
-              <p class="menu-note">11月〜3月ぐらいまで販売</p>
-
-              <div class="select-otsumami">
-                <div class="select-head">
-                  <p class="with-dot">組み合わせ自由 選べるおつまみ</p>
-                  <ul>
-                    <li>単品：385円</li>
-                    <li>3品：979円</li>
-                    <li>4品：1,309円</li>
-                  </ul>
-                </div>
-                <p>※下記からお選びいただけます。</p>
-                <ul class="otsumami-list">
-                  <li>枝豆のペペロンチーノ</li>
-                  <li>ポテトサラダ</li>
-                  <li>鶏キムチなっとう</li>
-                  <li>魚粉フライドポテト</li>
-                  <li>鶏皮ポンズ</li>
-                  <li>しらす冷奴</li>
-                  <li>アンチョビポテト</li>
-                  <li>クリームチーズの味噌漬け</li>
-                  <li>塩昆布キャベツ</li>
-                  <li>野菜スティック</li>
-                  <li>ミニピラフ</li>
-                  <li>メンチカツ</li>
-                  <li>アジフライ</li>
-                </ul>
+        <div id="food-panel-page" class="tab-panel active" role="tabpanel" aria-labelledby="food-tab-page">
+          <section class="menu-section-block">
+            <h2 class="menu-section-title"><span>オ</span>リジナルメニュー</h2>
+            <div class="menu-separator red"><i></i></div>
+            <div class="menu-sheet-two-col">
+              <div>
+                <h3 class="menu-subhead">単品鶏出汁おでん</h3>
+                <dl class="menu-price-list">
+                  <div><dt>大根</dt><dd>198円</dd></div>
+                  <div><dt>ちくわ</dt><dd>110円</dd></div>
+                  <div><dt>ちくわぶ</dt><dd>110円</dd></div>
+                  <div><dt>こんにゃく</dt><dd>110円</dd></div>
+                  <div><dt>絹ごし厚揚げ</dt><dd>165円</dd></div>
+                </dl>
+              </div>
+              <div>
+                <h3 class="menu-subhead menu-subhead-spacer">単品鶏出汁おでん</h3>
+                <dl class="menu-price-list">
+                  <div><dt>くるまふ</dt><dd>198円</dd></div>
+                  <div><dt>たまご</dt><dd>143円</dd></div>
+                  <div><dt>ごぼうてん</dt><dd>132円</dd></div>
+                  <div><dt>じゃがいも</dt><dd>132円</dd></div>
+                  <div><dt>がんも</dt><dd>143円</dd></div>
+                  <div><dt>はんぺん</dt><dd>132円</dd></div>
+                </dl>
               </div>
             </div>
+          </section>
 
-            <div class="food-recommend-right">
-              <dl class="menu-price-list">
-                <div><dt>本日の刺身</dt><dd>605円〜</dd></div>
-                <div><dt>本日のカルパッチョ</dt><dd>660円〜</dd></div>
-                <div><dt>枝豆</dt><dd>330円</dd></div>
-                <div><dt>長いもときゅうりの梅肉和え</dt><dd>385円</dd></div>
-                <div><dt>エイヒレ炙り</dt><dd>495円</dd></div>
-                <div><dt>鶏モモの唐揚げ</dt><dd>440円</dd></div>
-                <div><dt>ヤゲン軟骨塩だれ焼き</dt><dd>440円</dd></div>
-                <div><dt>豚軟骨煮込み</dt><dd>495円</dd></div>
-                <div><dt>チキン南蛮</dt><dd>550円</dd></div>
-                <div><dt>まぐろ血合いステーキ</dt><dd>550円</dd></div>
-                <div><dt>本日のアヒージョ</dt><dd>660円</dd></div>
-                <div><dt>きまぐれ焼飯</dt><dd>660円</dd></div>
-                <div><dt>牛すじカレー</dt><dd>715円</dd></div>
-                <div><dt>ナポリタン</dt><dd>715円</dd></div>
-                <div><dt>昔ながらのオムライス</dt><dd>715円</dd></div>
-                <div><dt>鶏スープうどん</dt><dd>440円</dd></div>
-                <div><dt>鶏出汁ラーメン</dt><dd>660円</dd></div>
-                <div><dt>アンチョビピザ</dt><dd>660円</dd></div>
-                <div><dt>おまかせスパゲッティ</dt><dd>770〜990円</dd></div>
-                <div><dt>１６穀米のチーズリゾット</dt><dd>990円</dd></div>
-                <div><dt>麦飯</dt><dd>220円</dd></div>
-                <div><dt>バケット</dt><dd>220円</dd></div>
-              </dl>
+          <section class="menu-section-block">
+            <h2 class="menu-section-title"><span>定</span>番メニュー</h2>
+            <div class="menu-separator blue"><i></i></div>
+            <h3 class="menu-subhead center">● おすすめメニュー</h3>
+            <div class="menu-sheet-two-col food-recommend">
+              <div class="food-recommend-left">
+                <dl class="menu-price-list">
+                  <div><dt class="with-dot">特製もつ煮</dt><dd>440円</dd></div>
+                  <div><dt class="with-dot">冬期限定スペイン産生ハム（ハモンセラーノ）</dt><dd></dd></div>
+                </dl>
+                <p class="menu-note">11月〜3月ぐらいまで販売</p>
+
+                <div class="select-otsumami">
+                  <div class="select-head">
+                    <p class="with-dot">組み合わせ自由 選べるおつまみ</p>
+                    <ul>
+                      <li>単品：385円</li>
+                      <li>3品：979円</li>
+                      <li>4品：1,309円</li>
+                    </ul>
+                  </div>
+                  <p>※下記からお選びいただけます。</p>
+                  <ul class="otsumami-list">
+                    <li>枝豆のペペロンチーノ</li>
+                    <li>ポテトサラダ</li>
+                    <li>鶏キムチなっとう</li>
+                    <li>魚粉フライドポテト</li>
+                    <li>鶏皮ポンズ</li>
+                    <li>しらす冷奴</li>
+                    <li>アンチョビポテト</li>
+                    <li>クリームチーズの味噌漬け</li>
+                    <li>塩昆布キャベツ</li>
+                    <li>野菜スティック</li>
+                    <li>ミニピラフ</li>
+                    <li>メンチカツ</li>
+                    <li>アジフライ</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="food-recommend-right">
+                <dl class="menu-price-list">
+                  <div><dt>本日の刺身</dt><dd>605円〜</dd></div>
+                  <div><dt>本日のカルパッチョ</dt><dd>660円〜</dd></div>
+                  <div><dt>枝豆</dt><dd>330円</dd></div>
+                  <div><dt>長いもときゅうりの梅肉和え</dt><dd>385円</dd></div>
+                  <div><dt>エイヒレ炙り</dt><dd>495円</dd></div>
+                  <div><dt>鶏モモの唐揚げ</dt><dd>440円</dd></div>
+                  <div><dt>ヤゲン軟骨塩だれ焼き</dt><dd>440円</dd></div>
+                  <div><dt>豚軟骨煮込み</dt><dd>495円</dd></div>
+                  <div><dt>チキン南蛮</dt><dd>550円</dd></div>
+                  <div><dt>まぐろ血合いステーキ</dt><dd>550円</dd></div>
+                  <div><dt>本日のアヒージョ</dt><dd>660円</dd></div>
+                  <div><dt>きまぐれ焼飯</dt><dd>660円</dd></div>
+                  <div><dt>牛すじカレー</dt><dd>715円</dd></div>
+                  <div><dt>ナポリタン</dt><dd>715円</dd></div>
+                  <div><dt>昔ながらのオムライス</dt><dd>715円</dd></div>
+                  <div><dt>鶏スープうどん</dt><dd>440円</dd></div>
+                  <div><dt>鶏出汁ラーメン</dt><dd>660円</dd></div>
+                  <div><dt>アンチョビピザ</dt><dd>660円</dd></div>
+                  <div><dt>おまかせスパゲッティ</dt><dd>770〜990円</dd></div>
+                  <div><dt>１６穀米のチーズリゾット</dt><dd>990円</dd></div>
+                  <div><dt>麦飯</dt><dd>220円</dd></div>
+                  <div><dt>バケット</dt><dd>220円</dd></div>
+                </dl>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section class="food-gallery">
-          <img src="img/food.jpg" alt="料理写真1" />
-          <img src="img/food2.jpg" alt="料理写真2" />
-          <img src="img/food3.jpg" alt="料理写真3" />
-        </section>
+          <section class="food-gallery">
+            <img src="img/food.jpg" alt="料理写真1" />
+            <img src="img/food2.jpg" alt="料理写真2" />
+            <img src="img/food3.jpg" alt="料理写真3" />
+          </section>
+        </div>
+
+        <div id="drink-panel-page" class="tab-panel" role="tabpanel" aria-labelledby="drink-tab-page">
+          <section class="menu-section-block">
+            <h2 class="menu-section-title"><span>定</span>番ドリンク</h2>
+            <div class="menu-separator red"><i></i></div>
+            <h3 class="menu-subhead center">● おすすめメニュー</h3>
+            <div class="menu-sheet-two-col">
+              <div>
+                <dl class="menu-price-list">
+                  <div><dt>ビール（ジョッキ）</dt><dd>550円</dd></div>
+                  <div><dt>ビール（グラス）</dt><dd>330円</dd></div>
+                  <div><dt>ホッピーセット（白、黒）</dt><dd>550円</dd></div>
+                  <div><dt>中身</dt><dd>242円・外330円</dd></div>
+                  <div><dt>ハイボール</dt><dd>440円</dd></div>
+                  <div><dt>ハイボール濃いめ</dt><dd>550円</dd></div>
+                  <div><dt>ジンジャーハイボール</dt><dd>495円</dd></div>
+                  <div><dt>コークハイ</dt><dd>495円</dd></div>
+                  <div><dt>黒ウーロンハイ</dt><dd>429円</dd></div>
+                  <div><dt>緑茶ハイ</dt><dd>429円</dd></div>
+                  <div><dt>青汁ハイ</dt><dd>429円</dd></div>
+                  <div><dt>野菜と果実ハイ</dt><dd>429円</dd></div>
+                  <div><dt>レモンサワー</dt><dd>429円</dd></div>
+                  <div><dt>グレープフルーツサワー</dt><dd>429円</dd></div>
+                  <div><dt>巨峰サワー</dt><dd>429円</dd></div>
+                  <div><dt>カルピスサワー</dt><dd>429円</dd></div>
+                  <div><dt>黒梅酒</dt><dd>429円</dd></div>
+                </dl>
+              </div>
+              <div>
+                <dl class="menu-price-list">
+                  <div><dt>樽詰めスパークリングワイン（グラス）</dt><dd>495円</dd></div>
+                  <div><dt>樽詰めスパークリングワイン（かちわり氷マグ）</dt><dd>594円</dd></div>
+                  <div><dt>ハウスワイン（赤、白）グラス</dt><dd>440円</dd></div>
+                  <div><dt>ハウスワイン（赤、白）500mlデキャンタ</dt><dd>1,320円</dd></div>
+                  <div><dt>ボトルワイン各種</dt><dd>2,420円</dd></div>
+                  <div><dt>焼酎各種</dt><dd>429〜605円</dd></div>
+                  <div><dt>ジントニック</dt><dd>539円</dd></div>
+                  <div><dt>ウォッカトニック</dt><dd>539円</dd></div>
+                  <div><dt>シャンディーガフ</dt><dd>605円</dd></div>
+                  <div><dt>レッドアイ</dt><dd>605円</dd></div>
+                  <div><dt>カシスオレンジ</dt><dd>539円</dd></div>
+                  <div><dt>カシスアップル</dt><dd>539円</dd></div>
+                  <div><dt>レゲエパンチ</dt><dd>539円</dd></div>
+                  <div><dt>赤玉パンチ</dt><dd>550円</dd></div>
+                  <div><dt>キューバリブレ</dt><dd>539円</dd></div>
+                  <div><dt>ソルクバーノ</dt><dd>605円</dd></div>
+                  <div><dt>ニコラシカ</dt><dd>660円</dd></div>
+                  <div><dt>横浜発祥カクテル ジャックター</dt><dd>825円</dd></div>
+                </dl>
+              </div>
+            </div>
+          </section>
+
+          <section class="menu-section-block">
+            <h2 class="menu-section-title"><span>洋</span>酒・日本酒・焼酎</h2>
+            <div class="menu-separator blue"><i></i></div>
+            <div class="menu-sheet-two-col">
+              <div>
+                <dl class="menu-price-list">
+                  <div><dt>テキーラ　クエルボゴールド</dt><dd>550円</dd></div>
+                  <div><dt>ラム　キャプテンモルガン</dt><dd>550円</dd></div>
+                  <div><dt>イエガーマイスター</dt><dd>660円</dd></div>
+                </dl>
+              </div>
+              <div>
+                <dl class="menu-price-list">
+                  <div><dt>ウィスキー各種</dt><dd>550円〜</dd></div>
+                  <div><dt>日本酒各種</dt><dd>1合660円〜</dd></div>
+                  <div><dt>焼酎各種</dt><dd>429〜605円</dd></div>
+                </dl>
+              </div>
+            </div>
+            <p class="menu-note">※入荷状況により内容が変わる場合があります。</p>
+          </section>
+        </div>
 
         <p><a class="btn btn-primary" href="index.html#menu">トップへ戻る</a></p>
       </div>

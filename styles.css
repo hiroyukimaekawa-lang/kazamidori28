@@ -337,6 +337,10 @@ a {
   margin-bottom: -56px;
 }
 
+.menu-tabs-wrap {
+  margin-top: 2.2rem;
+}
+
 .teaser-card {
   position: relative;
   text-decoration: none;
@@ -905,6 +909,11 @@ a {
 
 .menu-page-bg {
   background: #ececec;
+}
+
+.food-menu-page > .tabs {
+  margin-top: 0.2rem;
+  margin-bottom: 1.2rem;
 }
 
 .menu-section-block {

@@ -34,3 +34,22 @@ if (menuToggle && globalNav) {
     });
   });
 }
+
+const tabOpenLinks = document.querySelectorAll('[data-open-tab]');
+for (const link of tabOpenLinks) {
+  link.addEventListener('click', (event) => {
+    const targetId = link.getAttribute('data-open-tab');
+    if (!targetId) return;
+
+    const targetButton = document.querySelector(`.tab-btn[data-target="${targetId}"]`);
+    if (!targetButton) return;
+
+    event.preventDefault();
+    targetButton.click();
+
+    const tabWrap = document.getElementById('menu-tabs');
+    if (tabWrap) {
+      tabWrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+}

@@ -86,7 +86,7 @@
           </div>
 
           <div class="menu-teasers">
-            <a class="teaser-card" href="food.html">
+            <a class="teaser-card" href="#menu-tabs" data-open-tab="oden-panel-home">
               <img src="img/oden2.jpg" alt="おでん" />
               <div class="teaser-content">
                 <span>MENU LIST</span>
@@ -95,7 +95,7 @@
               </div>
             </a>
 
-            <a class="teaser-card" href="drink.html">
+            <a class="teaser-card" href="#menu-tabs" data-open-tab="drink-panel-home">
               <img src="img/alc.jpg" alt="お酒" />
               <div class="teaser-content">
                 <span>DRINK MENU</span>
@@ -112,6 +112,43 @@
                 <div class="teaser-line"></div>
               </div>
             </a>
+          </div>
+
+          <div id="menu-tabs" class="menu-tabs-wrap">
+            <div class="tabs" role="tablist" aria-label="お品書きタブ">
+              <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="oden-panel-home" id="oden-tab-home" data-target="oden-panel-home">おでん</button>
+              <button class="tab-btn" role="tab" aria-selected="false" aria-controls="drink-panel-home" id="drink-tab-home" data-target="drink-panel-home">お酒</button>
+            </div>
+
+            <div id="oden-panel-home" class="tab-panel active" role="tabpanel" aria-labelledby="oden-tab-home">
+              <div class="detail-grid"></div>
+            </div>
+
+            <div id="drink-panel-home" class="tab-panel" role="tabpanel" aria-labelledby="drink-tab-home">
+              <div class="detail-grid">
+                <article class="detail-card">
+                  <h3>定番ドリンク</h3>
+                  <ul>
+                    <li>ビール（ジョッキ）550円</li>
+                    <li>ハイボール 440円</li>
+                    <li>レモンサワー 429円</li>
+                    <li>黒ウーロンハイ 429円</li>
+                    <li>黒梅酒 429円</li>
+                  </ul>
+                  <a href="drink.html">お飲み物メニューを詳しく見る</a>
+                </article>
+                <article class="detail-card">
+                  <h3>カクテル・洋酒</h3>
+                  <ul>
+                    <li>ジントニック 539円</li>
+                    <li>カシスオレンジ 539円</li>
+                    <li>シャンディーガフ 605円</li>
+                    <li>イエガーマイスター 660円</li>
+                    <li>日本酒各種 1合660円〜</li>
+                  </ul>
+                </article>
+              </div>
+            </div>
           </div>
 
         </div>
