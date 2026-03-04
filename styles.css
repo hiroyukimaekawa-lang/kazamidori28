@@ -74,6 +74,12 @@ a {
   color: var(--green);
 }
 
+.site-logo {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
 .nav {
   margin-left: auto;
   display: flex;
@@ -751,6 +757,12 @@ a {
   color: #fff;
 }
 
+.footer-logo {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
 .footer-grid {
   margin-top: 1.6rem;
   display: grid;
@@ -1390,6 +1402,10 @@ a {
 
   .footer-brand {
     font-size: 1.45rem;
+  }
+
+  .footer-logo {
+    height: 32px;
   }
 
   .wordmark {
