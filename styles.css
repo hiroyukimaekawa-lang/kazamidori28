@@ -970,6 +970,10 @@ a {
   gap: 1.6rem;
 }
 
+.menu-sheet-two-col > div:only-child {
+  grid-column: 1 / -1;
+}
+
 .menu-subhead {
   margin: 0 0 0.8rem;
   color: #a10000;
@@ -993,6 +997,10 @@ a {
 
 .food-recommend .menu-price-list {
   gap: 0.8rem;
+}
+
+.food-recommend > div:only-child {
+  grid-column: 1 / -1;
 }
 
 .food-recommend-left .menu-note {

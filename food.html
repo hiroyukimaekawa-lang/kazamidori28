@@ -19,8 +19,8 @@
         <nav id="global-nav" class="nav" aria-label="グローバルナビゲーション">
           <a href="index.html#top">ホーム</a>
           <a href="about.html">当店のこだわり</a>
-          <a href="food.html">フード</a>
-          <a href="drink.html">ドリンク</a>
+          <a href="food.html?tab=food">フード</a>
+          <a href="food.html?tab=drink">ドリンク</a>
           <a href="course.html">コース</a>
           <a href="access.html">アクセス</a>
         </nav>
@@ -31,112 +31,130 @@
 
     <section class="subpage-hero">
       <div class="container">
-        <p class="eyebrow">MENU LIST</p>
-        <h1>お食事メニュー</h1>
-        <p>オリジナルメニュー・定番メニュー・おすすめメニューをご紹介します。</p>
+        <p id="menu-hero-eyebrow" class="eyebrow">MENU LIST</p>
+        <h1 id="menu-hero-title">お食事メニュー</h1>
+        <p id="menu-hero-description">オリジナルメニュー・定番メニュー・おすすめメニューをご紹介します。</p>
       </div>
     </section>
 
     <main class="subpage-main menu-page-bg">
       <div class="container food-menu-page">
         <div class="tabs" role="tablist" aria-label="メニュータブ">
-          <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="food-panel-page" id="food-tab-page" data-target="food-panel-page">フード</button>
-          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="drink-panel-page" id="drink-tab-page" data-target="drink-panel-page">ドリンク</button>
+          <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="food-panel-page" id="food-tab-page" data-target="food-panel-page" data-menu-type="food">フード</button>
+          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="drink-panel-page" id="drink-tab-page" data-target="drink-panel-page" data-menu-type="drink">ドリンク</button>
         </div>
 
         <div id="food-panel-page" class="tab-panel active" role="tabpanel" aria-labelledby="food-tab-page">
           <section class="menu-section-block">
-            <h2 class="menu-section-title"><span>オ</span>リジナルメニュー</h2>
+            <h2 class="menu-section-title"><span>単</span>品鶏出汁おでん</h2>
             <div class="menu-separator red"><i></i></div>
             <div class="menu-sheet-two-col">
               <div>
-                <h3 class="menu-subhead">単品鶏出汁おでん</h3>
                 <dl class="menu-price-list">
-                  <div><dt>大根</dt><dd>198円</dd></div>
-                  <div><dt>ちくわ</dt><dd>110円</dd></div>
-                  <div><dt>ちくわぶ</dt><dd>110円</dd></div>
-                  <div><dt>こんにゃく</dt><dd>110円</dd></div>
-                  <div><dt>絹ごし厚揚げ</dt><dd>165円</dd></div>
+                  <div><dt>おまかせ三種盛り</dt><dd>550円</dd></div>
+                  <div><dt>おまかせ五種盛り</dt><dd>850円</dd></div>
+                  <div><dt>ウィンナー</dt><dd>280円</dd></div>
+                  <div><dt>つくね</dt><dd>250円</dd></div>
+                  <div><dt>ぼんじり串</dt><dd>200円</dd></div>
+                  <div><dt>牛すじ</dt><dd>280円</dd></div>
+                  <div><dt>ごぼう天</dt><dd>160円</dd></div>
+                  <div><dt>はんぺん</dt><dd>160円</dd></div>
                 </dl>
               </div>
               <div>
-                <h3 class="menu-subhead menu-subhead-spacer">単品鶏出汁おでん</h3>
                 <dl class="menu-price-list">
-                  <div><dt>くるまふ</dt><dd>198円</dd></div>
-                  <div><dt>たまご</dt><dd>143円</dd></div>
-                  <div><dt>ごぼうてん</dt><dd>132円</dd></div>
-                  <div><dt>じゃがいも</dt><dd>132円</dd></div>
-                  <div><dt>がんも</dt><dd>143円</dd></div>
-                  <div><dt>はんぺん</dt><dd>132円</dd></div>
+                  <div><dt>しらたき</dt><dd>150円</dd></div>
+                  <div><dt>ちくわぶ</dt><dd>150円</dd></div>
+                  <div><dt>こんにゃく</dt><dd>150円</dd></div>
+                  <div><dt>厚揚げ</dt><dd>160円</dd></div>
+                  <div><dt>がんも</dt><dd>160円</dd></div>
+                  <div><dt>半熟玉子</dt><dd>180円</dd></div>
+                  <div><dt>ちくわ</dt><dd>150円</dd></div>
+                  <div><dt>大根</dt><dd>250円</dd></div>
                 </dl>
               </div>
             </div>
           </section>
 
           <section class="menu-section-block">
-            <h2 class="menu-section-title"><span>定</span>番メニュー</h2>
-            <div class="menu-separator blue"><i></i></div>
-            <h3 class="menu-subhead center">● おすすめメニュー</h3>
-            <div class="menu-sheet-two-col food-recommend">
-              <div class="food-recommend-left">
+            <h2 class="menu-section-title"><span>フ</span>ードメニュー</h2>
+            <div class="menu-separator red"><i></i></div>
+            <h3 class="menu-subhead center">● スピードメニュー・おつまみ</h3>
+            <div class="menu-sheet-two-col">
+              <div>
                 <dl class="menu-price-list">
-                  <div><dt class="with-dot">特製もつ煮</dt><dd>440円</dd></div>
-                  <div><dt class="with-dot">冬期限定スペイン産生ハム（ハモンセラーノ）</dt><dd></dd></div>
+                  <div><dt>塩昆布キャベツ</dt><dd>390円</dd></div>
+                  <div><dt>枝豆ペペロンチーノ</dt><dd>390円</dd></div>
+                  <div><dt>肉味噌きゅうり</dt><dd>390円</dd></div>
+                  <div><dt>オリーブマリネ</dt><dd>390円</dd></div>
+                  <div><dt>自家製ピクルス</dt><dd>500円</dd></div>
                 </dl>
-                <p class="menu-note">11月〜3月ぐらいまで販売</p>
-
-                <div class="select-otsumami">
-                  <div class="select-head">
-                    <p class="with-dot">組み合わせ自由 選べるおつまみ</p>
-                    <ul>
-                      <li>単品：385円</li>
-                      <li>3品：979円</li>
-                      <li>4品：1,309円</li>
-                    </ul>
-                  </div>
-                  <p>※下記からお選びいただけます。</p>
-                  <ul class="otsumami-list">
-                    <li>枝豆のペペロンチーノ</li>
-                    <li>ポテトサラダ</li>
-                    <li>鶏キムチなっとう</li>
-                    <li>魚粉フライドポテト</li>
-                    <li>鶏皮ポンズ</li>
-                    <li>しらす冷奴</li>
-                    <li>アンチョビポテト</li>
-                    <li>クリームチーズの味噌漬け</li>
-                    <li>塩昆布キャベツ</li>
-                    <li>野菜スティック</li>
-                    <li>ミニピラフ</li>
-                    <li>メンチカツ</li>
-                    <li>アジフライ</li>
-                  </ul>
-                </div>
               </div>
-
-              <div class="food-recommend-right">
+              <div>
                 <dl class="menu-price-list">
-                  <div><dt>本日の刺身</dt><dd>605円〜</dd></div>
-                  <div><dt>本日のカルパッチョ</dt><dd>660円〜</dd></div>
-                  <div><dt>枝豆</dt><dd>330円</dd></div>
-                  <div><dt>長いもときゅうりの梅肉和え</dt><dd>385円</dd></div>
-                  <div><dt>エイヒレ炙り</dt><dd>495円</dd></div>
-                  <div><dt>鶏モモの唐揚げ</dt><dd>440円</dd></div>
-                  <div><dt>ヤゲン軟骨塩だれ焼き</dt><dd>440円</dd></div>
-                  <div><dt>豚軟骨煮込み</dt><dd>495円</dd></div>
-                  <div><dt>チキン南蛮</dt><dd>550円</dd></div>
-                  <div><dt>まぐろ血合いステーキ</dt><dd>550円</dd></div>
-                  <div><dt>本日のアヒージョ</dt><dd>660円</dd></div>
-                  <div><dt>きまぐれ焼飯</dt><dd>660円</dd></div>
-                  <div><dt>牛すじカレー</dt><dd>715円</dd></div>
-                  <div><dt>ナポリタン</dt><dd>715円</dd></div>
-                  <div><dt>昔ながらのオムライス</dt><dd>715円</dd></div>
-                  <div><dt>鶏スープうどん</dt><dd>440円</dd></div>
-                  <div><dt>鶏出汁ラーメン</dt><dd>660円</dd></div>
-                  <div><dt>アンチョビピザ</dt><dd>660円</dd></div>
-                  <div><dt>おまかせスパゲッティ</dt><dd>770〜990円</dd></div>
-                  <div><dt>１６穀米のチーズリゾット</dt><dd>990円</dd></div>
-                  <div><dt>麦飯</dt><dd>220円</dd></div>
-                  <div><dt>バケット</dt><dd>220円</dd></div>
+                  <div><dt>ミックスナッツ</dt><dd>390円</dd></div>
+                  <div><dt>バナナチップス</dt><dd>390円</dd></div>
+                  <div><dt>エイヒレ炙り</dt><dd>500円</dd></div>
+                  <div><dt>アンチョビキャベツ</dt><dd>450円</dd></div>
+                </dl>
+              </div>
+            </div>
+          </section>
+
+          <section class="menu-section-block">
+            <h2 class="menu-section-title"><span>温</span>かい一品</h2>
+            <div class="menu-separator blue"><i></i></div>
+            <h3 class="menu-subhead center">● 揚げ物・温かい一品</h3>
+            <div class="menu-sheet-two-col">
+              <div>
+                <dl class="menu-price-list">
+                  <div><dt>鶏のから揚げ</dt><dd>660円</dd></div>
+                  <div><dt>ポテトフライ</dt><dd>490円</dd></div>
+                  <div><dt>チーズポテト</dt><dd>590円</dd></div>
+                  <div><dt>特製モツ煮豆腐</dt><dd>590円</dd></div>
+                  <div><dt>チキンナゲット</dt><dd>490円</dd></div>
+                </dl>
+              </div>
+              <div>
+                <dl class="menu-price-list">
+                  <div><dt>サバ塩焼き</dt><dd>750円</dd></div>
+                  <div><dt>アジフライ</dt><dd>500円</dd></div>
+                  <div><dt>油淋鶏</dt><dd>690円</dd></div>
+                  <div><dt>焼き餃子</dt><dd>550円</dd></div>
+                  <div><dt>チーズオムレツ</dt><dd>660円</dd></div>
+                </dl>
+              </div>
+            </div>
+          </section>
+
+          <section class="menu-section-block">
+            <h2 class="menu-section-title"><span>肉</span>料理（ステーキ）</h2>
+            <div class="menu-separator red"><i></i></div>
+            <div class="menu-sheet-two-col">
+              <div>
+                <dl class="menu-price-list">
+                  <div><dt>チャンステーキ</dt><dd>890円</dd></div>
+                  <div><dt>とんてき</dt><dd>890円</dd></div>
+                  <div><dt>牛ハラミステーキ</dt><dd>990円</dd></div>
+                </dl>
+              </div>
+            </div>
+          </section>
+
+          <section class="menu-section-block">
+            <h2 class="menu-section-title"><span>ご</span>飯・麺・その他</h2>
+            <div class="menu-separator blue"><i></i></div>
+            <div class="menu-sheet-two-col">
+              <div>
+                <dl class="menu-price-list">
+                  <div><dt>きまぐれ炒飯</dt><dd>880円</dd></div>
+                  <div><dt>牛すじカレー</dt><dd>890円</dd></div>
+                  <div><dt>ルーロー飯</dt><dd>880円</dd></div>
+                  <div><dt>鶏スープうどん</dt><dd>690円</dd></div>
+                  <div><dt>鶏塩ラーメン</dt><dd>790円</dd></div>
+                  <div><dt>アンチョビピザ</dt><dd>780円</dd></div>
+                  <div><dt>麦飯</dt><dd>250円</dd></div>
+                  <div><dt>バケット</dt><dd>250円</dd></div>
                 </dl>
               </div>
             </div>
@@ -153,75 +171,180 @@
           <section class="menu-section-block">
             <h2 class="menu-section-title"><span>定</span>番ドリンク</h2>
             <div class="menu-separator red"><i></i></div>
-            <h3 class="menu-subhead center">● おすすめメニュー</h3>
+            <h3 class="menu-subhead center">● ビール・ハイボール・サワー</h3>
             <div class="menu-sheet-two-col">
               <div>
                 <dl class="menu-price-list">
-                  <div><dt>ビール（ジョッキ）</dt><dd>550円</dd></div>
-                  <div><dt>ビール（グラス）</dt><dd>330円</dd></div>
-                  <div><dt>ホッピーセット（白、黒）</dt><dd>550円</dd></div>
-                  <div><dt>中身</dt><dd>242円・外330円</dd></div>
-                  <div><dt>ハイボール</dt><dd>440円</dd></div>
-                  <div><dt>ハイボール濃いめ</dt><dd>550円</dd></div>
-                  <div><dt>ジンジャーハイボール</dt><dd>495円</dd></div>
-                  <div><dt>コークハイ</dt><dd>495円</dd></div>
-                  <div><dt>黒ウーロンハイ</dt><dd>429円</dd></div>
-                  <div><dt>緑茶ハイ</dt><dd>429円</dd></div>
-                  <div><dt>青汁ハイ</dt><dd>429円</dd></div>
-                  <div><dt>野菜と果実ハイ</dt><dd>429円</dd></div>
-                  <div><dt>レモンサワー</dt><dd>429円</dd></div>
-                  <div><dt>グレープフルーツサワー</dt><dd>429円</dd></div>
-                  <div><dt>巨峰サワー</dt><dd>429円</dd></div>
-                  <div><dt>カルピスサワー</dt><dd>429円</dd></div>
-                  <div><dt>黒梅酒</dt><dd>429円</dd></div>
+                  <div><dt>生ビール（中）</dt><dd>630円</dd></div>
+                  <div><dt>メガサイズ</dt><dd>1,100円</dd></div>
+                  <div><dt>瓶ビール 赤星</dt><dd>680円</dd></div>
+                  <div><dt>ノンアルコールビール</dt><dd>550円</dd></div>
+                  <div><dt>ハイボール</dt><dd>500円</dd></div>
+                  <div><dt>角ハイボール</dt><dd>550円</dd></div>
                 </dl>
               </div>
               <div>
                 <dl class="menu-price-list">
-                  <div><dt>樽詰めスパークリングワイン（グラス）</dt><dd>495円</dd></div>
-                  <div><dt>樽詰めスパークリングワイン（かちわり氷マグ）</dt><dd>594円</dd></div>
-                  <div><dt>ハウスワイン（赤、白）グラス</dt><dd>440円</dd></div>
-                  <div><dt>ハウスワイン（赤、白）500mlデキャンタ</dt><dd>1,320円</dd></div>
-                  <div><dt>ボトルワイン各種</dt><dd>2,420円</dd></div>
-                  <div><dt>焼酎各種</dt><dd>429〜605円</dd></div>
-                  <div><dt>ジントニック</dt><dd>539円</dd></div>
-                  <div><dt>ウォッカトニック</dt><dd>539円</dd></div>
-                  <div><dt>シャンディーガフ</dt><dd>605円</dd></div>
-                  <div><dt>レッドアイ</dt><dd>605円</dd></div>
-                  <div><dt>カシスオレンジ</dt><dd>539円</dd></div>
-                  <div><dt>カシスアップル</dt><dd>539円</dd></div>
-                  <div><dt>レゲエパンチ</dt><dd>539円</dd></div>
-                  <div><dt>赤玉パンチ</dt><dd>550円</dd></div>
-                  <div><dt>キューバリブレ</dt><dd>539円</dd></div>
-                  <div><dt>ソルクバーノ</dt><dd>605円</dd></div>
-                  <div><dt>ニコラシカ</dt><dd>660円</dd></div>
-                  <div><dt>横浜発祥カクテル ジャックター</dt><dd>825円</dd></div>
+                  <div><dt>ジンジャーハイ / コークハイ</dt><dd>各550円</dd></div>
+                  <div><dt>黒ウーロンハイ / 緑茶ハイ</dt><dd>各500円</dd></div>
+                  <div><dt>サワー各種（レモン、ライム、グレープフルーツ、ピーチ、巨峰、カルピス）</dt><dd>各500円</dd></div>
+                  <div><dt>巨峰カルピスサワー</dt><dd>550円</dd></div>
+                </dl>
+              </div>
+            </div>
+            <p class="menu-note">※ハイボール・サワー系は+350円でメガサイズに変更可能です。</p>
+          </section>
+
+          <section class="menu-section-block">
+            <h2 class="menu-section-title"><span>ワ</span>イン・スパークリング</h2>
+            <div class="menu-separator blue"><i></i></div>
+            <div class="menu-sheet-two-col">
+              <div>
+                <dl class="menu-price-list">
+                  <div><dt>樽詰めスパークリングワイン（グラス）</dt><dd>550円</dd></div>
+                  <div><dt>樽詰めスパークリングワイン（かち割氷マグ）</dt><dd>600円</dd></div>
+                  <div><dt>ハウスワイン（赤・白）グラス</dt><dd>550円</dd></div>
+                  <div><dt>ハウスワイン（赤・白）500mlデキャンタ</dt><dd>1,500円</dd></div>
+                  <div><dt>ハウスワイン（赤・白）フルボトル</dt><dd>2,200円</dd></div>
                 </dl>
               </div>
             </div>
           </section>
 
           <section class="menu-section-block">
-            <h2 class="menu-section-title"><span>洋</span>酒・日本酒・焼酎</h2>
+            <h2 class="menu-section-title"><span>焼</span>酎・日本酒・その他</h2>
+            <div class="menu-separator red"><i></i></div>
+            <div class="menu-sheet-two-col">
+              <div>
+                <dl class="menu-price-list">
+                  <div><dt>日本酒</dt><dd>別紙にて</dd></div>
+                  <div><dt>焼酎各種</dt><dd>550円</dd></div>
+                  <div><dt>ウィスキー各種</dt><dd>600円〜</dd></div>
+                  <div><dt>ホッピーセット</dt><dd>550円（中身 330円）</dd></div>
+                  <div><dt>黒梅酒</dt><dd>500円</dd></div>
+                </dl>
+              </div>
+            </div>
+          </section>
+
+          <section class="menu-section-block">
+            <h2 class="menu-section-title"><span>カ</span>クテル・ショット</h2>
             <div class="menu-separator blue"><i></i></div>
             <div class="menu-sheet-two-col">
               <div>
                 <dl class="menu-price-list">
-                  <div><dt>テキーラ　クエルボゴールド</dt><dd>550円</dd></div>
-                  <div><dt>ラム　キャプテンモルガン</dt><dd>550円</dd></div>
-                  <div><dt>イエガーマイスター</dt><dd>660円</dd></div>
+                  <div><dt>カクテル各種（カシスオレンジ、ジントニック等）</dt><dd>590円〜780円</dd></div>
+                  <div><dt>シャンディーガフ</dt><dd>650円</dd></div>
+                  <div><dt>ショット（テキーラ）</dt><dd>500円</dd></div>
+                  <div><dt>ショット（イエーガー）</dt><dd>600円</dd></div>
+                  <div><dt>ショット（ニコラシカ）</dt><dd>700円</dd></div>
+                </dl>
+              </div>
+            </div>
+          </section>
+
+          <section class="menu-section-block">
+            <h2 class="menu-section-title"><span>★</span>ソフトドリンク</h2>
+            <div class="menu-separator red"><i></i></div>
+            <h3 class="menu-subhead center">ALL 350円</h3>
+            <div class="menu-sheet-two-col">
+              <div>
+                <dl class="menu-price-list">
+                  <div><dt>黒ウーロン茶</dt><dd>350円</dd></div>
+                  <div><dt>グリーンティー</dt><dd>350円</dd></div>
+                  <div><dt>ジンジャーエール</dt><dd>350円</dd></div>
+                  <div><dt>コーラ</dt><dd>350円</dd></div>
                 </dl>
               </div>
               <div>
                 <dl class="menu-price-list">
-                  <div><dt>ウィスキー各種</dt><dd>550円〜</dd></div>
-                  <div><dt>日本酒各種</dt><dd>1合660円〜</dd></div>
-                  <div><dt>焼酎各種</dt><dd>429〜605円</dd></div>
+                  <div><dt>オレンジジュース</dt><dd>350円</dd></div>
+                  <div><dt>アップルジュース</dt><dd>350円</dd></div>
+                  <div><dt>巨峰ソーダ</dt><dd>350円</dd></div>
                 </dl>
               </div>
             </div>
-            <p class="menu-note">※入荷状況により内容が変わる場合があります。</p>
           </section>
+
+          <section class="menu-section-block">
+            <h2 class="menu-section-title"><span>追</span>加 お酒メニュー</h2>
+            <div class="menu-separator blue"><i></i></div>
+            <p class="menu-note">※ブラックボード・税別</p>
+            <h3 class="menu-subhead center">● ウィスキー</h3>
+            <div class="menu-sheet-two-col">
+              <div>
+                <dl class="menu-price-list">
+                  <div><dt>山崎（ジャパニーズ）</dt><dd>900円</dd></div>
+                  <div><dt>メーカーズマーク（バーボン）</dt><dd>700円</dd></div>
+                  <div><dt>オールドクロウ（バーボン）</dt><dd>600円</dd></div>
+                  <div><dt>ジャックダニエル（テネシー）</dt><dd>700円</dd></div>
+                </dl>
+              </div>
+              <div>
+                <dl class="menu-price-list">
+                  <div><dt>シーバスリーガル ミズナラ（スコッチ）</dt><dd>700円</dd></div>
+                  <div><dt>ラフロイグ（スコッチ）</dt><dd>750円</dd></div>
+                  <div><dt>トマーティン（スコッチ）</dt><dd>800円</dd></div>
+                  <div><dt>バランタイン（スコッチ）</dt><dd>600円</dd></div>
+                  <div><dt>カナディアンクラブ（カナダ）</dt><dd>650円</dd></div>
+                </dl>
+              </div>
+            </div>
+          </section>
+
+          <section class="menu-section-block">
+            <h2 class="menu-section-title"><span>ジ</span>ン・ラム・リキュール</h2>
+            <div class="menu-separator red"><i></i></div>
+            <div class="menu-sheet-two-col">
+              <div>
+                <dl class="menu-price-list">
+                  <div><dt>タンカレー（ジン）</dt><dd>650円</dd></div>
+                  <div><dt>ボンベイサファイア（ジン）</dt><dd>700円</dd></div>
+                  <div><dt>キャプテンモルガン（ラム）</dt><dd>600円</dd></div>
+                  <div><dt>沖縄 マクガン（ラム）</dt><dd>650円</dd></div>
+                </dl>
+              </div>
+              <div>
+                <dl class="menu-price-list">
+                  <div><dt>カンパリ（リキュール）</dt><dd>550円</dd></div>
+                  <div><dt>アマレット（リキュール）</dt><dd>550円</dd></div>
+                  <div><dt>コアントロー（リキュール）</dt><dd>550円</dd></div>
+                </dl>
+              </div>
+            </div>
+          </section>
+
+          <section class="menu-section-block">
+            <h2 class="menu-section-title"><span>焼</span>酎・ワイン・その他</h2>
+            <div class="menu-separator blue"><i></i></div>
+            <div class="menu-sheet-two-col">
+              <div>
+                <dl class="menu-price-list">
+                  <div><dt>黒伊佐錦（芋焼酎）</dt><dd>500円</dd></div>
+                  <div><dt>DAIYAME（芋焼酎）</dt><dd>580円</dd></div>
+                  <div><dt>茜霧島（芋焼酎）</dt><dd>600円</dd></div>
+                  <div><dt>ボトルワイン</dt><dd>2,000円（種類はスタッフまで）</dd></div>
+                  <div><dt>シャンパン</dt><dd>9,000円</dd></div>
+                </dl>
+              </div>
+            </div>
+          </section>
+
+          <section class="menu-section-block">
+            <h2 class="menu-section-title"><span>日</span>本酒</h2>
+            <div class="menu-separator red"><i></i></div>
+            <div class="menu-sheet-two-col">
+              <div>
+                <dl class="menu-price-list">
+                  <div><dt>静岡 磯自慢</dt><dd></dd></div>
+                  <div><dt>山口 獺祭</dt><dd></dd></div>
+                  <div><dt>福島 楽器正宗</dt><dd></dd></div>
+                </dl>
+              </div>
+            </div>
+            <p class="menu-note">※他はスタッフまでおたずね下さい</p>
+          </section>
+
         </div>
 
         <p><a class="btn btn-primary" href="index.html#menu">トップへ戻る</a></p>
@@ -235,8 +358,8 @@
           <div class="footer-grid">
             <section>
               <h3>MENU</h3>
-              <a href="food.html">お食事メニュー</a>
-              <a href="drink.html">お飲み物メニュー</a>
+              <a href="food.html?tab=food">お食事メニュー</a>
+              <a href="food.html?tab=drink">お飲み物メニュー</a>
               <a href="course.html">コース・貸し切り予約</a>
             </section>
             <section>
